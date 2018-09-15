@@ -1,7 +1,13 @@
-<p>
+<div>
   list works!
-</p>
+</div>
 
-<p>
-  {{employees}}
-</p>
+<div>
+  <ul class="heroes">
+    <li *ngFor="let hero of employees">
+      <span class="badge">{{hero.ID}}</span> {{hero.Name}}
+    </li>
+  </ul>
+</div>
+
+
