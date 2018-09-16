@@ -7,11 +7,13 @@
 </div>
 
 <div style="text-align:center;border: 1px;">
-  Top Navigation
+  <a routerLink="employee-list">Employee List</a>
 </div>
 
 
 <div style="text-align:center">
-  <app-list></app-list>
+
+  <router-outlet></router-outlet>
+  <hr />
   <app-messages></app-messages>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../employee';
 
 import { EmployeeService } from '../employee.service';
 
@@ -9,7 +10,7 @@ import { EmployeeService } from '../employee.service';
 })
 export class ListComponent implements OnInit {
 
-  employees: object[];
+  employees: Employee[];
 
   constructor(private employeeService: EmployeeService) { }
 
@@ -21,5 +22,4 @@ export class ListComponent implements OnInit {
   getAllEmployees(): void {
     this.employeeService.getAll().subscribe(emp => this.employees = emp);
   }
-
 }

@@ -5,7 +5,7 @@
 <div>
   <ul class="heroes">
     <li *ngFor="let hero of employees">
-      <span class="badge">{{hero.ID}}</span> {{hero.Name}}
+      {{hero.ID}} <a class="badge" routerLink="/employee-detail/{{hero.ID}}">{{hero.Name}}</a>
     </li>
   </ul>
 </div>

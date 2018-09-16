@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { MessageService } from '../message.service';
+import { Employee } from './employee';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -22,15 +23,26 @@ export class EmployeeService {
   }
 
   /** GET heroes from the server */
-  getAll(): Observable<object[]> {
+  getAll(): Observable<Employee[]> {
     const url = `${environment.webApiUrl}/${this.employeesUrl}`;
 
     this.msgSer.add('Called GetALL()');
 
-    return this.http.get<object[]>(url)
+    return this.http.get<Employee[]>(url)
       .pipe(
-        tap(heroes => console.log(heroes)),
+        tap(heroes => this.log('fetched heroes')),
         catchError(this.handleError('getHeroes', []))
+      );
+  }
+
+  /** GET hero by id. Will 404 if id not found */
+  getEmployee(id: number): Observable<Employee> {
+    const url = `${environment.webApiUrl}/${this.employeesUrl}/${id}`;
+
+    return this.http.get<Employee>(url)
+      .pipe(
+        tap(_ => this.log(`fetched id=${id}`)),
+        catchError(this.handleError<Employee>(`getHero id=${id}`))
       );
   }
 
@@ -55,7 +67,7 @@ export class EmployeeService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    //this.messageService.add(`HeroService: ${message}`);
+    this.msgSer.add(`HeroService: ${message}`);
   }
 
 }
