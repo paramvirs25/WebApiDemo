@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { MessageService } from '../message.service';
 
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -17,12 +18,14 @@ export class EmployeeService {
 
   private employeesUrl = 'api/employees';  // URL to web api
   
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private msgSer: MessageService) {
   }
 
   /** GET heroes from the server */
   getAll(): Observable<object[]> {
     const url = `${environment.webApiUrl}/${this.employeesUrl}`;
+
+    this.msgSer.add('Called GetALL()');
 
     return this.http.get<object[]>(url)
       .pipe(
