@@ -1,0 +1,118 @@
+.tablpadd{
+    .preview-heding{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        @include breakpoint(medium) {
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    .top_btns{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include breakpoint(medium) {
+            margin-top: 20px;
+        }
+        .orangeBtn{
+            margin: 10px;
+        }
+    }
+    .preview_sec{
+        .agenda_template{
+            background-color: $base-color;
+            color: $white;
+            padding: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            p{
+                margin: 0px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+        .preview_tbl{
+            .tabl-hedings{
+                color: #f87c30;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 30px;
+                margin-top: 20px;
+            }
+            .pehragraph{
+                color:#555557;
+                margin-top: 15px;
+                span{
+                    font-weight: 700;
+                }
+            }
+        table{
+            border: solid 1px $orange-brdr;
+            tbody{
+                tr{
+                    th{
+                        padding: 5px;
+                        font-size: 14px !important;
+                        border: solid 1px $orange-brdr !important;
+                        &.td-width{
+                            width: 20%;
+                            @include breakpoint(medium) {
+                                width: 15%;
+                            }
+                        }
+                     }
+                    td{
+                        border: solid 1px $orange-brdr !important;
+                        border-bottom: none;
+                        padding: 5px !important;
+                        font-size: 14px !important;
+                        &.td-width{
+                            width: 20%;
+                            @include breakpoint(medium) {
+                                width: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+            &.secnd_tbl{
+                margin-top: 30px !important;
+                tr{
+                    td{
+                        p, i{
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+        .agenda-items-tabls{
+            .table{
+                margin-bottom: 20px !important;
+            }
+        }
+    }
+}
+}
+
+
+.timers-screen{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 32px;
+    .pause-btn {
+        margin: 0 20px;
+    }
+    .timers-setion{
+        padding: 6px 20px;
+        font-size: 19px;
+        &:hover{
+            background: $base-color !important;
+	        border: solid 1px $base-color !important; 
+        }
+    }
+}

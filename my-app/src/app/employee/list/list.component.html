@@ -1,13 +1,71 @@
-<div>
-  list works!
+<div class="screen-body-heding">
+  <div class="meting-type">
+    <label for="dropdown" class="text-uppercase">Meeting type</label>
+    <div class="mtng-select slect-style">
+      <label class="select-icon">
+        <select class="form-control scren-slct" id="sel1">
+          <option>Committee/Board Meeting</option>
+          <option>option</option>
+          <option>option</option>
+          <option>option</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="stetus">
+    <label for="dropdown" class="text-uppercase">Status</label>
+    <div class="mtng-select slect-style">
+      <label class="select-icon">
+        <select class="form-control scren-slct" id="sel1">
+          <option>Scheduled</option>
+          <option>option</option>
+          <option>option</option>
+          <option>option</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="add-agenda"><button class="screen-icon"></button>Add Agenda Items</div>
+  <button class="previous orangeBtn">Preview</button>
 </div>
 
-<div>
-  <ul class="heroes">
-    <li *ngFor="let hero of employees">
-      {{hero.ID}} <a class="badge" routerLink="/employee-detail/{{hero.ID}}">{{hero.Name}}</a>
-    </li>
-  </ul>
+<div class="screen-body mCustomScrollbar" data-mcs-theme="dark">
+  <div class="acodion-heading">
+    <p>#</p>
+    <p>Agenda items</p>
+  </div>
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default" *ngFor="let hero of employees">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <span>
+            <p>{{hero.ID}}</p>
+            <p><a class="badge" routerLink="/employee-detail/{{hero.ID}}">{{hero.Name}}</a></p>
+          </span>
+          <span>
+            <button class="dlt-icon"></button>
+            <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <span class="arrow-icon-down arrow-icon-up"></span>
+            </a>
+          </span>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <br />
+  <br />
+  <br />
+  Old display
+  <div>
+    <ul class="heroes">
+      <li *ngFor="let hero of employees">
+        {{hero.ID}} <a class="badge" routerLink="/employee-detail/{{hero.ID}}">{{hero.Name}}</a>
+      </li>
+    </ul>
+  </div>
+
+
 </div>
-
-

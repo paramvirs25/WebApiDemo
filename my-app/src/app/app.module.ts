@@ -7,13 +7,15 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ListComponent } from './employee/list/list.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DetailComponent } from './employee/detail/detail.component';
+import { LeftNavigationComponent } from './navigation/left-navigation/left-navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     MessagesComponent,
-    DetailComponent
+    DetailComponent,
+    LeftNavigationComponent
   ],
   imports: [
     BrowserModule,

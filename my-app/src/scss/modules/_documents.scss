@@ -1,0 +1,98 @@
+.table-body{
+    .alert{
+        &.alert_msg{
+            a{
+                &:hover{
+                    color: $base-color-2;
+                }
+            }
+        }
+    }
+    .tablpadd{
+       .doc_sections{
+           display: flex;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           justify-content: space-evenly;
+           @include breakpoint(medium){
+               flex-direction: column;
+           }
+            .docleft_bar{
+               width:300px;
+               height: 100%;
+               margin-top: 35px;
+               margin-right: 60px;
+               box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); 
+               @include breakpoint(medium){
+                   width: 100%;
+                   margin-bottom: 40px;
+                }
+                ul{
+                    li{
+                        padding: 10px;
+                        border-bottom: solid 1px  $light-gray3;
+                        &:hover{
+                            background-color: $base-color;
+                            color: $white;
+                            .icons{
+                                a{
+                                    color: #FFF;
+                                }
+                            }
+                        }
+                        .icons{
+                            float: right;
+                            a{
+                                color: #000;
+                                text-decoration: none;
+                                &:first-child{
+                                    margin-right: 30px;
+                                }
+                            }
+                        }
+                        &:last-child{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            .docrgt_sec{
+                width: calc(100% - 300px);
+                height: 100%;
+                @include breakpoint(medium){
+                    width: 100%;
+                }
+                .srch_bar{
+                    input{
+                        width: 100%;
+                        border: none;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+                table{
+                    thead{
+                        border-bottom: solid 2px $light-gray3;
+                        border-top: solid 1px $light-gray3;
+                        th{
+                            padding: 15px;
+                        }
+                    }
+                    tbody{
+                        td{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .orangeBtn{
+            margin: 10px 0px;
+        }
+    }
+    &.table-responsive{
+        @include breakpoint(small){
+            border: none;
+        }
+    }
+}

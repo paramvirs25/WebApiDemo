@@ -1,0 +1,321 @@
+// datepiker class
+.picker-switch{
+	.table-condensed{
+		display: none;
+	}
+}
+
+.inputfld {
+    height: 45px;
+    border-radius:3px;
+    background:$white;
+    border: solid 1px #ddd;
+    box-shadow: none;
+    width: 100%;
+    padding: 0px 15px;
+    transition: all ease 0.5s;
+    -webkit-appearance: none;
+    &:hover, &:focus, &:active {
+        background:$white;
+        border: solid 1px $base-color;
+        box-shadow: none;
+        outline: none;
+        transition: all ease 0.5s;
+    }
+    &.disabledFld {
+      background:#f2f2f2;
+      border: solid 1px #ddd;
+      &:hover, &:focus, &:active {
+        background:#f2f2f2;
+        border:solid 1px #ddd;
+      }
+    }
+    @media (max-width: 480px) {
+        height: 35px;
+        font-size:13px;
+    }
+}
+
+/* check box style */
+.my-check {
+    display: inline-block;
+    float: left;
+    padding-left: 30px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    @media (max-width: 375px) {     
+    padding-left: 25px;
+    }
+}
+.checkBox {
+    display: block;
+    float: left;
+    height: 18px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    width: 19px;
+    
+    @media (max-width: 375px) {     
+    height: 16px;    
+    width: 16px;
+    }
+}
+.checkBox > label{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    z-index: 9;    
+}
+.checkBox input[type="checkbox"] {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.checkBox input[type="checkbox"]:hover + label, .checkBox input[type="checkbox"]:active + label {
+    border-color: $base-color;
+}
+.checkBox input[type="checkbox"]:checked + label::after {
+    border-color: $base-color;
+    opacity: 1;    
+}
+.checkBox input[type="checkbox"]:checked + label {
+    border-color: $base-color;
+}
+.checkBox label::after {
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    content: "";
+    height: 6px;
+    left: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transform: rotate(-45deg) !important;
+    width: 10px;
+    @media (max-width: 375px) { 
+    height: 6px;
+    left: 2px;
+    top: 3px;
+    width: 9px;
+    }
+}
+.lablel {
+    color: #999;
+    float: left;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    white-space: normal;
+    margin: 0;
+    @media (max-width: 375px) {     
+       font-size: 13px;
+    }
+    a{
+        &:hover, &:focus, &:active{
+            color:$base-color;
+        }
+    }   
+    }
+/* check box style end */
+body {
+	-ms-overflow-style: scrollbar;
+  }
+  :focus {
+	outline: none;
+  }
+  .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+	  background: transparent;
+	  border:none;
+  }
+  /*Button style */
+  .greenBtn {
+	  text-transform: uppercase;
+	  background: $greenbtn;
+	  color: $white;
+	  border-radius: 6px;
+	  text-align: center;
+	  display: inline-block;
+	  padding: 8px 20px;
+	  transition: all ease 0.5s;
+	  border: solid 1px $greenbtn;
+	  &:hover, &:focus, &:active {
+		  transition: all ease 0.5s;
+		  text-decoration: none;
+		  background: $black-color;
+		  color: $white;
+		  border: solid 1px $black-color;                                
+	  }
+  }
+  .whiteBtn {
+	text-transform: uppercase;
+	background: $white;
+	color: $black-color;
+	border-radius: 100px;
+	text-align: center;
+	display: inline-block;
+	padding: 8px 20px;
+	transition: all ease 0.5s;
+	border: solid 1px $black-color; 
+	&:hover, &:focus, &:active {
+		transition: all ease 0.5s;
+		text-decoration: none;
+		background: $base-color;  
+		color:  $white;                              
+		border: solid 1px $base-color; 
+	}
+}
+  .orng-border-btn{
+    background: transparent !important;
+    border: solid 1px $base-color !important; 
+    color: $base-color;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    padding: 8px 20px;
+    transition: all ease 0.5s;  
+    white-space: normal;  
+    &:hover, &:focus, &:active {
+        transition: all ease 0.5s;
+        text-decoration: none;
+        background: $base-color !important;
+        color:  $white;                              
+        border: solid 1px $base-color !important;
+    }
+}
+  .orangeBtn {
+	  text-transform: uppercase;
+	  background: $base-color !important;
+	  border: solid 1px $base-color !important; 
+	  color: $white;
+	  border-radius: 100px;
+	  text-align: center;
+	  display: inline-block;
+	  padding: 10px 25px;
+	  transition: all ease 0.5s;  
+	  white-space: normal;  
+	  &:hover, &:focus, &:active {
+		  transition: all ease 0.5s;
+		  text-decoration: none;
+		  background: $black-color !important;
+		  color:  $white;                              
+		  border: solid 1px $black-color !important;
+       }
+   }
+.comn_Modal{
+    .modal-dialog{
+        &.modal-width-set{
+            width: 800px !important;
+        }
+    }
+}
+.comn_Modal{
+    .modal-dialog{
+        width: 1000px;
+        @media (max-width: 1100px){
+            width: 900px;
+        }
+        @media (max-width: 1000px){
+            width: 700px;
+        }
+    }
+    .modal-header{
+        background-color: $base-color;
+        color: #fff;
+        padding: 20px;
+        h4{
+            font-size: 22px;
+            text-align: center;
+        }
+        .close{
+            color: #fff;
+            font-size: 53px;
+            margin: 0;
+            opacity: 1;
+            position: absolute;
+            right: 17px;
+            top: 20px;
+            span{
+                background-color: rgba(0, 0, 0, 0);
+                background-image: url("../images/icon-cross.png");
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                display: block;
+                float: left;
+                height: 27px;
+                position: relative;
+                width: 28px;
+            }
+        }
+    }
+}
+.slect-style{
+    &:after{
+        content: '';
+        position: absolute;
+        background-image: url("../images/arrow-icon-placeholder.png") !important;
+        background-position: 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 12px;
+        width: 21px;
+        float: left;
+        right: 40px;
+        top: 33px;
+        &:hover, &:active, &:focus{
+            cursor: pointer;
+        }
+    }
+    select, input{
+        position: relative;
+        outline: none;
+        box-shadow: none;
+        height: auto;
+        font-size: 18px;
+        color: #8e8e8e ;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+        margin-bottom: 20px;
+        &:hover, &:active, &:focus{
+            outline: none;
+            box-shadow: none;
+            border-color:$base-color;
+            cursor: pointer;
+        }
+    }
+}
+.select-icon {
+    position:relative;
+    width: 100%;
+    float: left;
+    &:after {
+        content:"\f078";   
+        font-family: "FontAwesome";
+        font-size: 11px;
+        color: $base-color;
+        right: 0px;
+        top: 12px;
+        padding:0 0 2px;
+        position:absolute;
+        pointer-events:none;
+    }
+}

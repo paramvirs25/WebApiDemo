@@ -1,0 +1,536 @@
+/* Fonts*/
+/* color */
+/* Width */
+/* border-radius */
+/* Placeholder */
+/* Box Sizing */
+/* box-shadow */
+/* breakpoints */
+/* Retina */
+/* transition */
+/* ===== transformation ===== */
+/* rotate */
+/* scale */
+/* translate */
+/* skew */
+/* transform origin */
+/* ===== transformation Ends ===== */
+/* line 2, ../scss/base/_base.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 6, ../scss/base/_base.scss */
+body {
+  background: #ffffff none no-repeat scroll 0 0;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* min-width: 767px; */
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+/* line 18, ../scss/base/_base.scss */
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+  outline: 0px;
+  outline-offset: -2px;
+}
+
+/* line 22, ../scss/base/_base.scss */
+a {
+  outline: none;
+  border: 0px;
+}
+/* line 25, ../scss/base/_base.scss */
+a:hover, a:active, a:focus {
+  outline: none;
+}
+
+/* line 29, ../scss/base/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 32, ../scss/base/_base.scss */
+ul, li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 37, ../scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 41, ../scss/base/_base.scss */
+h1 {
+  font-size: 27px;
+  font-weight: 300;
+  font-family: inherit;
+  color: #cfcfcf;
+}
+
+/* line 47, ../scss/base/_base.scss */
+h2 {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+/* line 53, ../scss/base/_base.scss */
+h3 {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+/* line 59, ../scss/base/_base.scss */
+.no-Padd {
+  padding: 0 !important;
+}
+
+/* line 62, ../scss/base/_base.scss */
+.no-Marg {
+  margin: 0 !important;
+}
+
+/* line 65, ../scss/base/_base.scss */
+hr {
+  background: #dfdfdf;
+  border: medium none;
+  display: block;
+  float: left;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 75, ../scss/base/_base.scss */
+.modal-backdrop.in {
+  opacity: 0.95;
+}
+
+/* line 78, ../scss/base/_base.scss */
+.modal-backdrop {
+  background-color: #f4f4f4;
+}
+
+/* line 14, ../scss/layouts/_header.scss */
+.main_navbar {
+  background: #ffffff none repeat scroll 0 0;
+  border: medium none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  margin: 0;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 1000;
+}
+/* line 24, ../scss/layouts/_header.scss */
+.main_navbar .container {
+  position: relative;
+}
+/* line 26, ../scss/layouts/_header.scss */
+.main_navbar .container .navBrand {
+  display: none;
+}
+/* line 29, ../scss/layouts/_header.scss */
+.main_navbar .container .navbar-header {
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
+}
+/* line 36, ../scss/layouts/_header.scss */
+.main_navbar .container .navbar-brand {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+/* line 42, ../scss/layouts/_header.scss */
+.main_navbar.affix {
+  top: 0;
+  width: 100%;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 47, ../scss/layouts/_header.scss */
+.main_navbar.affix-top {
+  position: static;
+  top: -35px;
+}
+/* line 51, ../scss/layouts/_header.scss */
+.main_navbar.navbar-fixed-top {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 54, ../scss/layouts/_header.scss */
+.main_navbar.navbar-fixed-top.affix-top {
+  position: fixed;
+  top: 0;
+}
+/* line 58, ../scss/layouts/_header.scss */
+.main_navbar.navbar-fixed-top.affix {
+  background: #ffffff none repeat scroll 0 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 64, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav {
+  padding: 34px 0;
+}
+/* line 66, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li {
+  margin-right: 28px;
+}
+/* line 68, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li:last-child {
+  margin-right: 0;
+}
+/* line 71, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li a {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+/* line 78, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f87c30;
+}
+/* line 83, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li .nav-button {
+  border: 1px solid #999999;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 1px 4px 0px rgba(0, 1, 1, 0.15);
+  font-weight: 600;
+  padding: 14px 40px;
+}
+/* line 89, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li .nav-button.bg-blue {
+  border-color: #f87c30;
+  color: #ffffff;
+}
+/* line 93, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li .nav-button:hover, .main_navbar .navbar-nav li .nav-button:focus, .main_navbar .navbar-nav li .nav-button:active {
+  background-color: black;
+  border-color: black;
+  color: #ffffff;
+}
+/* line 100, ../scss/layouts/_header.scss */
+.main_navbar .navbar-nav li.active > a, .main_navbar .navbar-nav li.active > a:focus, .main_navbar .navbar-nav li.active > a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f87c30;
+}
+
+/* Responsive Header Style */
+@media (max-width: 1199px) {
+  /* line 178, ../scss/layouts/_header.scss */
+  .main_navbar .container {
+    padding-top: 50px;
+  }
+  /* line 180, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header {
+    top: 20px;
+    -moz-transform: translate(-50%, 0px);
+    -o-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px) !important;
+  }
+}
+/* 1199 px*/
+@media (max-width: 991px) {
+  /* line 191, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li {
+    margin-right: 22px;
+  }
+  /* line 193, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li a {
+    font-size: 13px;
+    padding: 13px 0;
+  }
+  /* line 197, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li .nav-button {
+    padding: 12px 35px;
+  }
+}
+/* 991 px*/
+@media (max-width: 767px) {
+  /* line 207, ../scss/layouts/_header.scss */
+  .main_navbar {
+    padding: 15px 0;
+  }
+  /* line 209, ../scss/layouts/_header.scss */
+  .main_navbar .container {
+    padding-top: 0;
+  }
+  /* line 211, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header {
+    left: auto;
+    margin: 0;
+    position: relative;
+    top: auto;
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px) !important;
+    width: 100%;
+  }
+  /* line 218, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle {
+    -moz-appearance: none;
+    background: black none repeat scroll 0 0;
+    border: medium none;
+    box-shadow: none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 34px;
+    margin: 8px 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-indent: -9999px;
+    transition: background 0.3s ease 0s;
+    width: 40px;
+  }
+  /* line 235, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
+    -moz-transition: background 0s ease 0.3s;
+    -o-transition: background 0s ease 0.3s;
+    -webkit-transition: background 0s ease 0.3s;
+    transition: background 0s ease 0.3s;
+    width: 50%;
+  }
+  /* line 246, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span:after, .main_navbar .container .navbar-header .navbar-toggle span:before {
+    background-color: #ffffff;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition-delay: 0s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+    width: 100%;
+  }
+  /* line 257, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span:after {
+    bottom: 0;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg) !important;
+    transition-property: bottom, transform;
+  }
+  /* line 262, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span:before {
+    top: 0;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) !important;
+    transition-property: top, transform;
+  }
+  /* line 268, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed {
+    background: #f87c30 none repeat scroll 0 0;
+  }
+  /* line 270, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span {
+    background: #ffffff none repeat scroll 0 0;
+  }
+  /* line 272, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span:after, .main_navbar .container .navbar-header .navbar-toggle.collapsed span:before {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg) !important;
+    transition-delay: 0.3s, 0s;
+  }
+  /* line 276, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span:before {
+    top: -7px;
+  }
+  /* line 279, ../scss/layouts/_header.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span:after {
+    bottom: -7px;
+  }
+  /* line 288, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-collapse {
+    border: none;
+    padding-bottom: 20px;
+  }
+  /* line 291, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-collapse.collapsing, .main_navbar .navbar-collapse.in {
+    background-color: #ffffff;
+  }
+  /* line 295, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav {
+    margin: 0;
+    padding: 0 15px;
+  }
+  /* line 298, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li {
+    margin-right: 0;
+  }
+  /* line 300, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li .nav-button {
+    text-align: center;
+  }
+  /* line 307, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav.navbar-right {
+    padding: 0;
+  }
+  /* line 309, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav.navbar-right li {
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+}
+/* 767 px*/
+@media (max-width: 480px) {
+  /* line 323, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li .nav-button {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 327, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav li .nav-button.bg-blue {
+    margin-bottom: 15px;
+  }
+  /* line 333, ../scss/layouts/_header.scss */
+  .main_navbar .navbar-nav.navbar-right li {
+    width: 100%;
+  }
+}
+/* 480 px*/
+/* Responsive Header Style */
+@media (max-width: 767px) {
+  /* line 348, ../scss/layouts/_header.scss */
+  .TopHdrBg {
+    min-height: 505px;
+  }
+}
+/* 767 px*/
+/* Sticky footer styles
+-------------------------------------------------- */
+/* html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px;
+}
+.footer-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+ */
+/* Sticky footer styles Ends
+-------------------------------------------------- */
+/* line 24, ../scss/layouts/_footer.scss */
+footer .ftrLinks li {
+  color: #999999;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 10px 0px;
+}
+/* line 29, ../scss/layouts/_footer.scss */
+footer .ftrLinks li a {
+  color: #999999;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all ease 0.5s;
+  padding: 5px 0px;
+  display: inline-block;
+  /* 480 px*/
+}
+@media (max-width: 480px) {
+  /* line 29, ../scss/layouts/_footer.scss */
+  footer .ftrLinks li a {
+    font-size: 13px;
+  }
+}
+/* line 41, ../scss/layouts/_footer.scss */
+footer .ftrLinks li a.copyright:hover, footer .ftrLinks li a.copyright:focus, footer .ftrLinks li a.copyright:active {
+  text-decoration: none;
+  transition: all ease 0.5s;
+  color: #999999;
+  cursor: initial;
+}
+/* line 48, ../scss/layouts/_footer.scss */
+footer .ftrLinks li a:hover, footer .ftrLinks li a:focus, footer .ftrLinks li a:active, footer .ftrLinks li a.active {
+  text-decoration: none;
+  transition: all ease 0.5s;
+  color: #f87c30;
+}
+
+/* Responsive Footer Style */
+/* 1199 px*/
+/* 991 px*/
+/* 767 px*/

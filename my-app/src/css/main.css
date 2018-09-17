@@ -1,0 +1,2948 @@
+/* Fonts*/
+/* color */
+/* border-radius */
+/* Placeholder */
+/* Box Sizing */
+/* box-shadow */
+/* breakpoints */
+/* Retina */
+/* transition */
+/* ===== transformation ===== */
+/* rotate */
+/* scale */
+/* translate */
+/* skew */
+/* transform origin */
+/* ===== transformation Ends ===== */
+/* line 2, ../scss/base/_base.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 6, ../scss/base/_base.scss */
+body {
+  min-width: 768px;
+  background: #ffffff none no-repeat 0 0;
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* min-width: 767px; */
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+/* line 19, ../scss/base/_base.scss */
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+  outline: 0px;
+  outline-offset: -2px;
+}
+
+/* line 23, ../scss/base/_base.scss */
+a {
+  outline: none;
+  border: 0px;
+}
+/* line 26, ../scss/base/_base.scss */
+a:hover, a:active, a:focus {
+  outline: none;
+}
+
+/* line 30, ../scss/base/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 33, ../scss/base/_base.scss */
+ul, li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 38, ../scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 42, ../scss/base/_base.scss */
+h1 {
+  font-size: 27px;
+  font-weight: 300;
+  font-family: inherit;
+  color: #cfcfcf;
+}
+
+/* line 48, ../scss/base/_base.scss */
+h2 {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+/* line 54, ../scss/base/_base.scss */
+h3 {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+/* line 60, ../scss/base/_base.scss */
+.no-Padd {
+  padding: 0 !important;
+}
+
+/* line 63, ../scss/base/_base.scss */
+th, td, tr {
+  border: none !important;
+}
+
+/* line 66, ../scss/base/_base.scss */
+.no-Marg {
+  margin: 0 !important;
+}
+
+/* line 69, ../scss/base/_base.scss */
+hr {
+  background: #dfdfdf;
+  border: medium none;
+  display: block;
+  float: left;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 79, ../scss/base/_base.scss */
+.modal-backdrop.in {
+  opacity: 0.95;
+}
+
+/* line 82, ../scss/base/_base.scss */
+.modal-backdrop {
+  background-color: #f4f4f4;
+}
+
+/* line 1, ../scss/layouts/_leftsidebar.scss */
+.main_navbar {
+  background: #ffffff none repeat scroll 0 0;
+  border: medium none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  margin: 0;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 1000;
+}
+/* line 11, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .container {
+  position: relative;
+}
+/* line 13, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .container .navBrand {
+  display: none;
+}
+/* line 16, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .container .navbar-header {
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
+}
+/* line 23, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .container .navbar-brand {
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+/* line 29, ../scss/layouts/_leftsidebar.scss */
+.main_navbar.affix {
+  top: 0;
+  width: 100%;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 34, ../scss/layouts/_leftsidebar.scss */
+.main_navbar.affix-top {
+  position: static;
+  top: -35px;
+}
+/* line 38, ../scss/layouts/_leftsidebar.scss */
+.main_navbar.navbar-fixed-top {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 41, ../scss/layouts/_leftsidebar.scss */
+.main_navbar.navbar-fixed-top.affix-top {
+  position: fixed;
+  top: 0;
+}
+/* line 45, ../scss/layouts/_leftsidebar.scss */
+.main_navbar.navbar-fixed-top.affix {
+  background: #ffffff none repeat scroll 0 0;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  box-shadow: 0 0 6px 0 rgba(0, 1, 1, 0.21);
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 51, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav {
+  padding: 34px 0;
+}
+/* line 53, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li {
+  margin-right: 28px;
+}
+/* line 55, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li:last-child {
+  margin-right: 0;
+}
+/* line 58, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li a {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+/* line 65, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f87c30;
+}
+/* line 70, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li .nav-button {
+  border: 1px solid #999999;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 1px 4px 0px rgba(0, 1, 1, 0.15);
+  font-weight: 600;
+  padding: 14px 40px;
+}
+/* line 76, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li .nav-button.bg-blue {
+  border-color: #f87c30;
+  color: #ffffff;
+}
+/* line 80, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li .nav-button:hover, .main_navbar .navbar-nav li .nav-button:focus, .main_navbar .navbar-nav li .nav-button:active {
+  background-color: black;
+  border-color: black;
+  color: #ffffff;
+}
+/* line 87, ../scss/layouts/_leftsidebar.scss */
+.main_navbar .navbar-nav li.active > a, .main_navbar .navbar-nav li.active > a:focus, .main_navbar .navbar-nav li.active > a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f87c30;
+}
+
+/* Responsive Header Style */
+@media (max-width: 1199px) {
+  /* line 100, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container {
+    padding-top: 50px;
+  }
+  /* line 102, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header {
+    top: 20px;
+    -moz-transform: translate(-50%, 0px);
+    -o-transform: translate(-50%, 0px);
+    -ms-transform: translate(-50%, 0px);
+    -webkit-transform: translate(-50%, 0px);
+    transform: translate(-50%, 0px) !important;
+  }
+}
+/* 1199 px*/
+@media (max-width: 991px) {
+  /* line 113, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li {
+    margin-right: 22px;
+  }
+  /* line 115, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li a {
+    font-size: 13px;
+    padding: 13px 0;
+  }
+  /* line 119, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li .nav-button {
+    padding: 12px 35px;
+  }
+}
+/* 991 px*/
+@media (max-width: 767px) {
+  /* line 129, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar {
+    padding: 15px 0;
+  }
+  /* line 131, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container {
+    padding-top: 0;
+  }
+  /* line 133, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header {
+    left: auto;
+    margin: 0;
+    position: relative;
+    top: auto;
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px) !important;
+    width: 100%;
+  }
+  /* line 140, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle {
+    -moz-appearance: none;
+    background: black none repeat scroll 0 0;
+    border: medium none;
+    box-shadow: none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 34px;
+    margin: 8px 0 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-indent: -9999px;
+    transition: background 0.3s ease 0s;
+    width: 40px;
+  }
+  /* line 157, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
+    -moz-transition: background 0s ease 0.3s;
+    -o-transition: background 0s ease 0.3s;
+    -webkit-transition: background 0s ease 0.3s;
+    transition: background 0s ease 0.3s;
+    width: 50%;
+  }
+  /* line 168, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span:after, .main_navbar .container .navbar-header .navbar-toggle span:before {
+    background-color: #ffffff;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition-delay: 0s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+    width: 100%;
+  }
+  /* line 179, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span:after {
+    bottom: 0;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg) !important;
+    transition-property: bottom, transform;
+  }
+  /* line 184, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle span:before {
+    top: 0;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) !important;
+    transition-property: top, transform;
+  }
+  /* line 190, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed {
+    background: #f87c30 none repeat scroll 0 0;
+  }
+  /* line 192, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span {
+    background: #ffffff none repeat scroll 0 0;
+  }
+  /* line 194, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span:after, .main_navbar .container .navbar-header .navbar-toggle.collapsed span:before {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg) !important;
+    transition-delay: 0.3s, 0s;
+  }
+  /* line 198, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span:before {
+    top: -7px;
+  }
+  /* line 201, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .container .navbar-header .navbar-toggle.collapsed span:after {
+    bottom: -7px;
+  }
+  /* line 210, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-collapse {
+    border: none;
+    padding-bottom: 20px;
+  }
+  /* line 213, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-collapse.collapsing, .main_navbar .navbar-collapse.in {
+    background-color: #ffffff;
+  }
+  /* line 217, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav {
+    margin: 0;
+    padding: 0 15px;
+  }
+  /* line 220, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li {
+    margin-right: 0;
+  }
+  /* line 222, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li .nav-button {
+    text-align: center;
+  }
+  /* line 229, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav.navbar-right {
+    padding: 0;
+  }
+  /* line 231, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav.navbar-right li {
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+  }
+}
+/* 767 px*/
+@media (max-width: 480px) {
+  /* line 245, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li .nav-button {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 249, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav li .nav-button.bg-blue {
+    margin-bottom: 15px;
+  }
+  /* line 255, ../scss/layouts/_leftsidebar.scss */
+  .main_navbar .navbar-nav.navbar-right li {
+    width: 100%;
+  }
+}
+/* 480 px*/
+/* Responsive Header Style */
+@media (max-width: 767px) {
+  /* line 270, ../scss/layouts/_leftsidebar.scss */
+  .TopHdrBg {
+    min-height: 505px;
+  }
+}
+/* 767 px*/
+/* line 274, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter {
+  display: inline-block;
+  float: none;
+  padding-left: 22px;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 280, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter .glyphicon {
+  color: #f87c30;
+  display: inline-block;
+  font-size: 16px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%) !important;
+}
+/* line 291, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter .bootstrap-select .btn {
+  font-size: 14px;
+  height: 38px;
+  line-height: 1.3;
+  padding-left: 5px;
+}
+/* line 299, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter .bootstrap-select.btn-group .dropdown-toggle .caret {
+  right: 0;
+}
+/* line 304, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter .bootstrap-select .dropdown-menu {
+  border: medium none;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.18);
+}
+/* line 308, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter .bootstrap-select .dropdown-menu.inner {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 5px 0;
+}
+/* line 312, ../scss/layouts/_leftsidebar.scss */
+.tbl_filter .bootstrap-select .dropdown-menu.inner li a {
+  color: #878787;
+  font-size: 14px;
+  padding: 9px 20px;
+  text-transform: capitalize;
+}
+
+/* line 324, ../scss/layouts/_leftsidebar.scss */
+.left_col {
+  background: #fff !important;
+  display: inline-block;
+  left: 0;
+  height: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 230px;
+  z-index: 2;
+  transition: all ease 0.5s;
+  overflow: hidden;
+}
+/* line 336, ../scss/layouts/_leftsidebar.scss */
+.left_col.col-position {
+  position: absolute;
+  /* 1199 px*/
+}
+@media (max-width: 1199px) {
+  /* line 336, ../scss/layouts/_leftsidebar.scss */
+  .left_col.col-position {
+    position: fixed;
+  }
+}
+/* line 342, ../scss/layouts/_leftsidebar.scss */
+.left_col .ToplogoSec {
+  padding: 20px 15px;
+}
+/* line 344, ../scss/layouts/_leftsidebar.scss */
+.left_col .ToplogoSec a {
+  float: left;
+}
+/* line 347, ../scss/layouts/_leftsidebar.scss */
+.left_col .ToplogoSec img {
+  max-width: 100%;
+}
+/* line 350, ../scss/layouts/_leftsidebar.scss */
+.left_col .ToplogoSec.biglogo {
+  display: block;
+  transition: all ease 0.5s;
+}
+/* line 354, ../scss/layouts/_leftsidebar.scss */
+.left_col .ToplogoSec.smllogo {
+  display: none;
+  transition: all ease 0.5s;
+  text-align: center;
+}
+/* line 360, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus {
+  float: left;
+  width: 100%;
+  margin-top: 110px;
+}
+@media (max-width: 1199px) {
+  /* line 360, ../scss/layouts/_leftsidebar.scss */
+  .left_col .leftMenus {
+    margin-top: 0px;
+  }
+}
+/* line 367, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul {
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+/* line 372, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li {
+  float: left;
+  width: 100%;
+  border-bottom: solid 1px #d7d8da;
+}
+/* line 376, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li.logout-btn {
+  position: fixed;
+  bottom: 0px;
+  width: 230px;
+  border-top: solid 1px #d7d8da;
+  left: 0;
+}
+@media (max-width: 1199px) {
+  /* line 376, ../scss/layouts/_leftsidebar.scss */
+  .left_col .leftMenus ul li.logout-btn {
+    display: none;
+  }
+}
+/* line 386, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a {
+  float: left;
+  width: 100%;
+  display: inline-block;
+  padding: 15px 0px 15px 22px;
+  color: #444444;
+  text-decoration: none;
+  transition: all ease 0.5s;
+  border-right: 2px solid transparent;
+}
+/* line 395, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a.drag-btns {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 399, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a.drag-btns span.li_Txt {
+  text-align: left;
+}
+/* line 402, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a.drag-btns i {
+  display: inline-block;
+}
+/* line 406, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a:hover, .left_col .leftMenus ul li a:focus, .left_col .leftMenus ul li a:active {
+  text-decoration: none;
+  transition: all ease 0.5s;
+  color: #f87c30;
+  background: #eeeeee;
+  border-right: 2px solid #f87c30;
+}
+/* line 413, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a:hover i.icons, .left_col .leftMenus ul li a:focus i.icons, .left_col .leftMenus ul li a:active i.icons {
+  background-position: center bottom;
+}
+/* line 418, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a i {
+  margin-right: 10px;
+  transition: all ease 0.5s;
+}
+/* line 421, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a i.glyphicon-level-up {
+  font-size: 16px;
+}
+/* line 424, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a i.icons {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  margin-bottom: -2px;
+  width: 20px;
+  transition: all ease 0.0s;
+}
+/* line 432, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a i.icons.agenda-icon {
+  background-image: url("../images/agenda.png");
+  height: 27px;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 432, ../scss/layouts/_leftsidebar.scss */
+  .left_col .leftMenus ul li a i.icons.agenda-icon {
+    background-image: url("../images/agenda.png");
+    /* on retina, use image that's scaled by 2 */
+    background-size: 9px 10px;
+    /*@include image-2x("url", 100px, 25px);*/
+  }
+}
+/* line 437, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a i.icons.meeting-icon {
+  background-image: url("../images/meeting.png");
+  height: 20px;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 437, ../scss/layouts/_leftsidebar.scss */
+  .left_col .leftMenus ul li a i.icons.meeting-icon {
+    background-image: url("../images/meeting.png");
+    /* on retina, use image that's scaled by 2 */
+    background-size: 9px 10px;
+    /*@include image-2x("url", 100px, 25px);*/
+  }
+}
+/* line 442, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a i.icons.member-icon {
+  background-image: url("../images/clockwise-rotation.png");
+  height: 20px;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 442, ../scss/layouts/_leftsidebar.scss */
+  .left_col .leftMenus ul li a i.icons.member-icon {
+    background-image: url("../images/clockwise-rotation.png");
+    /* on retina, use image that's scaled by 2 */
+    background-size: 9px 10px;
+    /*@include image-2x("url", 100px, 25px);*/
+  }
+}
+/* line 449, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li a span.li_Txt {
+  margin-left: 0px;
+  transition: all ease 0.5s;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* line 457, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li.active a {
+  color: #f87c30;
+  background: #eeeeee;
+  border-right: 2px solid #f87c30;
+}
+/* line 463, ../scss/layouts/_leftsidebar.scss */
+.left_col .leftMenus ul li.active i.icons {
+  background-position: center bottom;
+}
+/* line 471, ../scss/layouts/_leftsidebar.scss */
+.left_col .copyright {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 475, ../scss/layouts/_leftsidebar.scss */
+.left_col .copyright p {
+  text-align: center;
+  color: white;
+}
+
+/* line 483, ../scss/layouts/_leftsidebar.scss */
+.main_container {
+  background: #333333 none repeat scroll 0 0;
+  display: inline-block;
+  height: 100%;
+  min-height: 100vh;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-left: 230px;
+  transition: all ease 0.5s;
+}
+/* line 495, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col {
+  background: white none repeat scroll 0 0;
+  float: right;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-bottom: 0px;
+}
+/* line 503, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .rightcontent {
+  float: left;
+  width: 100%;
+}
+/* line 507, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav {
+  padding: 15px;
+  background: #eeeeee;
+  border-bottom: solid 1px #e8e8e8;
+  min-height: 100vh;
+}
+/* line 512, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .left_menu_icon {
+  position: fixed;
+  z-index: 1;
+}
+/* line 515, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .left_menu_icon .glyphicon-menu-hamburger {
+  font-size: 24px;
+  line-height: 20px;
+  top: 4px;
+  transition: all 0.5s ease 0s;
+}
+/* line 520, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .left_menu_icon .glyphicon-menu-hamburger:hover, .main_container .right_col .TopNav .left_menu_icon .glyphicon-menu-hamburger:focus, .main_container .right_col .TopNav .left_menu_icon .glyphicon-menu-hamburger:active {
+  color: #f87c30;
+  transition: all ease 0.5s;
+}
+/* line 525, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .left_menu_icon .hideSideBar {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  font-size: 35px;
+  top: 50%;
+  left: 90px;
+  cursor: pointer;
+  transform: translate(-10px, -50%);
+  transition: all 0.5s ease 0s;
+}
+/* line 535, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .left_menu_icon .hideSideBar:hover, .main_container .right_col .TopNav .left_menu_icon .hideSideBar:focus, .main_container .right_col .TopNav .left_menu_icon .hideSideBar:active {
+  color: #f87c30;
+  transition: all ease 0.5s;
+}
+/* line 543, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .right_menu ul.navbar-right {
+  margin: 20px 0px;
+}
+/* line 546, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .right_menu ul.navbar-right li button {
+  margin-right: 45px;
+}
+/* line 549, ../scss/layouts/_leftsidebar.scss */
+.main_container .right_col .TopNav .right_menu ul.navbar-right li .glyphicon.glyphicon-cog {
+  color: #f87c30;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+
+/* line 563, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar {
+  padding-left: 90px;
+  transition: all ease 0.5s;
+}
+/* line 566, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar.nochange {
+  padding-left: 90px;
+}
+/* line 569, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col {
+  width: 90px;
+  transition: all ease 0.5s;
+}
+/* line 573, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .ToplogoSec.smllogo {
+  display: block;
+}
+/* line 575, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .ToplogoSec.smllogo.drag-logo-smll {
+  display: block;
+  /* 1199 px*/
+}
+@media (max-width: 1199px) {
+  /* line 575, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .left_col .ToplogoSec.smllogo.drag-logo-smll {
+    display: none;
+  }
+}
+/* line 582, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .ToplogoSec.biglogo {
+  display: none;
+}
+/* line 584, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .ToplogoSec.biglogo.drag-logo-big {
+  display: none;
+  /* 1199 px*/
+}
+@media (max-width: 1199px) {
+  /* line 584, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .left_col .ToplogoSec.biglogo.drag-logo-big {
+    display: block;
+  }
+}
+/* line 592, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftProfile {
+  display: none;
+  transition: all ease 0.5s;
+}
+/* line 599, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li.logout-btn {
+  width: 90px;
+}
+@media (max-width: 1199px) {
+  /* line 599, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .left_col .leftMenus ul li.logout-btn {
+    display: inline-block;
+  }
+}
+/* line 605, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li a {
+  text-align: center;
+  transition: all ease 0.5s;
+  padding: 15px 10px;
+}
+/* line 610, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li a.drag-btns i {
+  display: none !important;
+  /* 1199 px*/
+}
+@media (max-width: 1199px) {
+  /* line 610, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .left_col .leftMenus ul li a.drag-btns i {
+    display: inline-block !important;
+    font-size: 12px !important;
+  }
+}
+/* line 618, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li a i {
+  font-size: 20px !important;
+  margin-right: 0;
+  transition: all ease 0.5s;
+}
+/* line 622, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li a i.icons {
+  display: inline-block;
+}
+/* line 626, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li a span.li_Txt {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  font-size: 10px;
+  transition: all ease 0.5s;
+}
+/* line 633, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .leftMenus ul li a span.li_Txt span {
+  display: none;
+}
+/* line 642, ../scss/layouts/_leftsidebar.scss */
+.main_container.NoLeftBar .left_col .copyright {
+  display: none;
+  transition: all ease 0.5s;
+}
+
+/* ========================Responsive style start============================= */
+@media (max-width: 1199px) {
+  /* line 652, ../scss/layouts/_leftsidebar.scss */
+  .main_container {
+    padding-left: 0px;
+    transition: all ease 0.5s;
+  }
+  /* line 655, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col {
+    width: 0px;
+    transition: all ease 0.5s;
+  }
+  /* line 659, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .ToplogoSec.smllogo {
+    display: block;
+  }
+  /* line 662, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .ToplogoSec.biglogo {
+    display: none;
+  }
+  /* line 666, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .leftProfile {
+    display: none;
+    transition: all ease 0.5s;
+  }
+  /* line 673, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .leftMenus ul li a {
+    text-align: center;
+    transition: all ease 0.5s;
+  }
+  /* line 676, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .leftMenus ul li a i {
+    font-size: 20px !important;
+    margin-right: 0;
+    transition: all ease 0.5s;
+  }
+  /* line 681, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .leftMenus ul li a span.li_Txt {
+    float: left;
+    width: 100%;
+    margin-left: 0;
+    font-size: 10px;
+    transition: all ease 0.5s;
+  }
+  /* line 688, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .leftMenus ul li a span.rght_arrow {
+    display: none;
+    transition: all ease 0.5s;
+  }
+  /* line 696, ../scss/layouts/_leftsidebar.scss */
+  .main_container .left_col .copyright {
+    display: none;
+    transition: all ease 0.5s;
+  }
+  /* line 701, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar {
+    padding-left: 00px;
+    transition: all ease 0.5s;
+  }
+  /* line 704, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .left_col {
+    width: 90px;
+    transition: all ease 0.5s;
+  }
+  /* line 712, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .left_col .leftMenus ul li a span.li_Txt span {
+    display: inline-block;
+    margin-right: 3px;
+  }
+  /* line 725, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar .right_col .TopNav .left_menu_icon .hideSideBar {
+    display: block;
+    transition: all ease 0.5s;
+  }
+  /* line 732, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar.nochange {
+    padding-left: 0px;
+  }
+  /* line 734, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar.nochange .left_col {
+    width: 230px;
+  }
+  /* line 740, ../scss/layouts/_leftsidebar.scss */
+  .main_container.NoLeftBar.nochange .right_col .TopNav .left_menu_icon .hideSideBar {
+    display: block;
+    transition: all ease 0.5s;
+    top: 3px;
+    left: 235px;
+  }
+
+  /* line 758, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li {
+    margin-left: 5px;
+  }
+  /* line 760, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li a {
+    font-size: 13px;
+    padding: 6px 15px;
+  }
+  /* line 765, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li .navbar-form #srch-term {
+    height: 34px;
+  }
+  /* line 769, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li .navbar-form .input-group-btn .btn {
+    padding: 6px 12px;
+  }
+}
+/* 1199 px*/
+@media (max-width: 767px) {
+  /* line 788, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .left_menu_icon .glyphicon-menu-hamburger {
+    font-size: 17px;
+    margin-top: 4px;
+  }
+  /* line 792, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .left_menu_icon .hideSideBar {
+    font-size: 30px;
+  }
+  /* line 798, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li {
+    vertical-align: bottom;
+  }
+  /* line 800, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto;
+    background-color: white;
+    border: solid 1px #ddd;
+    box-shadow: 0px 0px 3px #ddd;
+  }
+}
+/* 767 px*/
+@media (max-width: 757px) {
+  /* line 822, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li {
+    margin-bottom: 10px;
+  }
+  /* line 824, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li:last-child {
+    margin-bottom: 10px;
+  }
+  /* line 828, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li .navbar-form #srch-term {
+    height: 32px;
+  }
+  /* line 832, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li .navbar-form .input-group-btn .btn {
+    padding: 5px 12px;
+  }
+}
+@media (max-width: 593px) {
+  /* line 853, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li a {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+  /* line 858, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li .navbar-form #srch-term {
+    height: 30px;
+  }
+  /* line 862, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li .navbar-form .input-group-btn .btn {
+    padding: 4px 12px;
+    height: 30px;
+  }
+}
+@media (max-width: 580px) {
+  /* line 882, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu nav .navbar-nav {
+    margin: 0px -15px !important;
+  }
+  /* line 891, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_hding {
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+  }
+  /* line 895, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_hding.cata_detail {
+    float: none;
+    width: auto;
+  }
+  /* line 900, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+  /* line 906, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li.srchform {
+    margin-bottom: 10px;
+  }
+  /* line 920, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions.cata_detail {
+    float: none;
+    width: auto;
+  }
+  /* line 926, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl.notificationHdr .page_content_hding {
+    width: auto;
+    float: none;
+  }
+  /* line 930, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl.notificationHdr .page_content_actions {
+    float: none;
+    width: auto;
+    text-align: right;
+  }
+}
+@media (max-width: 580px) and (max-width: 394px) {
+  /* line 906, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li.srchform {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 580px) and (max-width: 394px) {
+  /* line 913, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li.sorting {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 948, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li .dropdown-menu.msg_list {
+    width: 225px;
+    height: 250px;
+  }
+  /* line 953, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li .dropdown-menu.msg_list li a span.message {
+    line-height: 16px;
+  }
+  /* line 958, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li .dropdown-menu.msg_list li .text-center a {
+    line-height: 20px;
+  }
+}
+/* 480 px*/
+@media (max-width: 420px) {
+  /* line 977, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_hding h2 {
+    font-size: 17px;
+  }
+  /* line 984, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .page_content .dsplyTbl .page_content_actions ul li a {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
+@media (max-width: 375px) {
+  /* line 1003, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li .dropdown-menu.msg_list {
+    height: 250px;
+    width: 180px;
+    right: 0;
+    left: auto;
+  }
+  /* line 1010, ../scss/layouts/_leftsidebar.scss */
+  .main_container .right_col .TopNav .right_menu .navbar-right li .dropdown-menu.msg_list li a .time {
+    width: 100%;
+    position: relative;
+    left: 0;
+    float: left;
+  }
+}
+/* line 3, ../scss/layouts/_components.scss */
+.picker-switch .table-condensed {
+  display: none;
+}
+
+/* line 8, ../scss/layouts/_components.scss */
+.inputfld {
+  height: 45px;
+  border-radius: 3px;
+  background: white;
+  border: solid 1px #ddd;
+  box-shadow: none;
+  width: 100%;
+  padding: 0px 15px;
+  transition: all ease 0.5s;
+  -webkit-appearance: none;
+}
+/* line 18, ../scss/layouts/_components.scss */
+.inputfld:hover, .inputfld:focus, .inputfld:active {
+  background: white;
+  border: solid 1px #f87c30;
+  box-shadow: none;
+  outline: none;
+  transition: all ease 0.5s;
+}
+/* line 25, ../scss/layouts/_components.scss */
+.inputfld.disabledFld {
+  background: #f2f2f2;
+  border: solid 1px #ddd;
+}
+/* line 28, ../scss/layouts/_components.scss */
+.inputfld.disabledFld:hover, .inputfld.disabledFld:focus, .inputfld.disabledFld:active {
+  background: #f2f2f2;
+  border: solid 1px #ddd;
+}
+@media (max-width: 480px) {
+  /* line 8, ../scss/layouts/_components.scss */
+  .inputfld {
+    height: 35px;
+    font-size: 13px;
+  }
+}
+
+/* check box style */
+/* line 40, ../scss/layouts/_components.scss */
+.my-check {
+  display: inline-block;
+  float: left;
+  padding-left: 30px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+@media (max-width: 375px) {
+  /* line 40, ../scss/layouts/_components.scss */
+  .my-check {
+    padding-left: 25px;
+  }
+}
+
+/* line 51, ../scss/layouts/_components.scss */
+.checkBox {
+  display: block;
+  float: left;
+  height: 18px;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: 19px;
+}
+@media (max-width: 375px) {
+  /* line 51, ../scss/layouts/_components.scss */
+  .checkBox {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+/* line 68, ../scss/layouts/_components.scss */
+.checkBox > label {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  float: left;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  z-index: 9;
+}
+
+/* line 80, ../scss/layouts/_components.scss */
+.checkBox input[type="checkbox"] {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute !important;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 90, ../scss/layouts/_components.scss */
+.checkBox input[type="checkbox"]:hover + label, .checkBox input[type="checkbox"]:active + label {
+  border-color: #f87c30;
+}
+
+/* line 93, ../scss/layouts/_components.scss */
+.checkBox input[type="checkbox"]:checked + label::after {
+  border-color: #f87c30;
+  opacity: 1;
+}
+
+/* line 97, ../scss/layouts/_components.scss */
+.checkBox input[type="checkbox"]:checked + label {
+  border-color: #f87c30;
+}
+
+/* line 100, ../scss/layouts/_components.scss */
+.checkBox label::after {
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  content: "";
+  height: 6px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-45deg) !important;
+  width: 10px;
+}
+@media (max-width: 375px) {
+  /* line 100, ../scss/layouts/_components.scss */
+  .checkBox label::after {
+    height: 6px;
+    left: 2px;
+    top: 3px;
+    width: 9px;
+  }
+}
+
+/* line 119, ../scss/layouts/_components.scss */
+.lablel {
+  color: #999;
+  float: left;
+  font-family: "Open Sans",sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  white-space: normal;
+  margin: 0;
+}
+@media (max-width: 375px) {
+  /* line 119, ../scss/layouts/_components.scss */
+  .lablel {
+    font-size: 13px;
+  }
+}
+/* line 132, ../scss/layouts/_components.scss */
+.lablel a:hover, .lablel a:focus, .lablel a:active {
+  color: #f87c30;
+}
+
+/* check box style end */
+/* line 138, ../scss/layouts/_components.scss */
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+/* line 141, ../scss/layouts/_components.scss */
+:focus {
+  outline: none;
+}
+
+/* line 144, ../scss/layouts/_components.scss */
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  background: transparent;
+  border: none;
+}
+
+/*Button style */
+/* line 149, ../scss/layouts/_components.scss */
+.greenBtn {
+  text-transform: uppercase;
+  background: #7cbb00;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 20px;
+  transition: all ease 0.5s;
+  border: solid 1px #7cbb00;
+}
+/* line 159, ../scss/layouts/_components.scss */
+.greenBtn:hover, .greenBtn:focus, .greenBtn:active {
+  transition: all ease 0.5s;
+  text-decoration: none;
+  background: #333333;
+  color: white;
+  border: solid 1px #333333;
+}
+
+/* line 167, ../scss/layouts/_components.scss */
+.whiteBtn {
+  text-transform: uppercase;
+  background: white;
+  color: #333333;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 20px;
+  transition: all ease 0.5s;
+  border: solid 1px #333333;
+}
+/* line 177, ../scss/layouts/_components.scss */
+.whiteBtn:hover, .whiteBtn:focus, .whiteBtn:active {
+  transition: all ease 0.5s;
+  text-decoration: none;
+  background: #f87c30;
+  color: white;
+  border: solid 1px #f87c30;
+}
+
+/* line 185, ../scss/layouts/_components.scss */
+.orng-border-btn {
+  background: transparent !important;
+  border: solid 1px #f87c30 !important;
+  color: #f87c30;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 20px;
+  transition: all ease 0.5s;
+  white-space: normal;
+}
+/* line 195, ../scss/layouts/_components.scss */
+.orng-border-btn:hover, .orng-border-btn:focus, .orng-border-btn:active {
+  transition: all ease 0.5s;
+  text-decoration: none;
+  background: #f87c30 !important;
+  color: white;
+  border: solid 1px #f87c30 !important;
+}
+
+/* line 203, ../scss/layouts/_components.scss */
+.orangeBtn {
+  text-transform: uppercase;
+  background: #f87c30 !important;
+  border: solid 1px #f87c30 !important;
+  color: white;
+  border-radius: 100px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 25px;
+  transition: all ease 0.5s;
+  white-space: normal;
+}
+/* line 214, ../scss/layouts/_components.scss */
+.orangeBtn:hover, .orangeBtn:focus, .orangeBtn:active {
+  transition: all ease 0.5s;
+  text-decoration: none;
+  background: #333333 !important;
+  color: white;
+  border: solid 1px #333333 !important;
+}
+
+/* line 224, ../scss/layouts/_components.scss */
+.comn_Modal .modal-dialog.modal-width-set {
+  width: 800px !important;
+}
+
+/* line 230, ../scss/layouts/_components.scss */
+.comn_Modal .modal-dialog {
+  width: 1000px;
+}
+@media (max-width: 1100px) {
+  /* line 230, ../scss/layouts/_components.scss */
+  .comn_Modal .modal-dialog {
+    width: 900px;
+  }
+}
+@media (max-width: 1000px) {
+  /* line 230, ../scss/layouts/_components.scss */
+  .comn_Modal .modal-dialog {
+    width: 700px;
+  }
+}
+/* line 239, ../scss/layouts/_components.scss */
+.comn_Modal .modal-header {
+  background-color: #f87c30;
+  color: #fff;
+  padding: 20px;
+}
+/* line 243, ../scss/layouts/_components.scss */
+.comn_Modal .modal-header h4 {
+  font-size: 22px;
+  text-align: center;
+}
+/* line 247, ../scss/layouts/_components.scss */
+.comn_Modal .modal-header .close {
+  color: #fff;
+  font-size: 53px;
+  margin: 0;
+  opacity: 1;
+  position: absolute;
+  right: 17px;
+  top: 20px;
+}
+/* line 255, ../scss/layouts/_components.scss */
+.comn_Modal .modal-header .close span {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../images/icon-cross.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: block;
+  float: left;
+  height: 27px;
+  position: relative;
+  width: 28px;
+}
+
+/* line 271, ../scss/layouts/_components.scss */
+.slect-style:after {
+  content: '';
+  position: absolute;
+  background-image: url("../images/arrow-icon-placeholder.png") !important;
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 21px;
+  float: left;
+  right: 40px;
+  top: 33px;
+}
+/* line 283, ../scss/layouts/_components.scss */
+.slect-style:after:hover, .slect-style:after:active, .slect-style:after:focus {
+  cursor: pointer;
+}
+/* line 287, ../scss/layouts/_components.scss */
+.slect-style select, .slect-style input {
+  position: relative;
+  outline: none;
+  box-shadow: none;
+  height: auto;
+  font-size: 18px;
+  color: #8e8e8e;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: 20px;
+}
+/* line 298, ../scss/layouts/_components.scss */
+.slect-style select:hover, .slect-style select:active, .slect-style select:focus, .slect-style input:hover, .slect-style input:active, .slect-style input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #f87c30;
+  cursor: pointer;
+}
+
+/* line 306, ../scss/layouts/_components.scss */
+.select-icon {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+/* line 310, ../scss/layouts/_components.scss */
+.select-icon:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-size: 11px;
+  color: #f87c30;
+  right: 0px;
+  top: 12px;
+  padding: 0 0 2px;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 1, ../scss/modules/_agenda.scss */
+.loginbg {
+  background: rgba(0, 0, 0, 0) url("../images/login_bg.jpg") no-repeat scroll 0 0/cover;
+}
+/* line 3, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv {
+  background: white none repeat scroll 0 0;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+/* line 14, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form {
+  width: 350px;
+  margin: 20px auto;
+}
+/* line 17, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .logoCenter {
+  margin-bottom: 30px;
+}
+/* line 19, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .logoCenter a {
+  display: inline-block;
+  width: 200px;
+}
+/* line 22, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .logoCenter a img {
+  max-width: 100%;
+}
+/* line 27, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row {
+  margin-bottom: 15px;
+  position: relative;
+}
+/* line 30, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row input {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0) !important;
+  padding-left: 40px;
+}
+/* line 35, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translatey(-50%);
+  font-size: 15px;
+}
+/* line 43, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .loginOrForgotPass li {
+  display: inline-block;
+}
+/* line 45, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .loginOrForgotPass li:last-child {
+  float: right;
+}
+/* line 47, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .loginOrForgotPass li:last-child .forgotPas {
+  color: #999999;
+  text-decoration: none;
+  line-height: 1.3;
+  display: inline-block;
+  float: right;
+  transition: all ease 0.5s;
+}
+/* line 54, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .loginOrForgotPass li:last-child .forgotPas:hover, .loginbg .LoginOuterDiv form .form-row .loginOrForgotPass li:last-child .forgotPas:focus, .loginbg .LoginOuterDiv form .form-row .loginOrForgotPass li:last-child .forgotPas:active {
+  text-decoration: none;
+  color: #f87c30;
+  transition: all ease 0.5s;
+}
+/* line 63, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .forgotPas {
+  color: #333333;
+  text-decoration: none;
+  line-height: 1.3;
+  display: inline-block;
+  transition: all ease 0.5s;
+}
+/* line 69, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .forgotPas:hover, .loginbg .LoginOuterDiv form .form-row .forgotPas:focus, .loginbg .LoginOuterDiv form .form-row .forgotPas:active {
+  text-decoration: none;
+  color: #f87c30;
+  transition: all ease 0.5s;
+}
+/* line 75, ../scss/modules/_agenda.scss */
+.loginbg .LoginOuterDiv form .form-row .NotMember {
+  color: #999999;
+  border-top: solid 1px #ddd;
+  padding-top: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* line 86, ../scss/modules/_agenda.scss */
+.forgot_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 90, ../scss/modules/_agenda.scss */
+.forgot_btn li {
+  margin: 0 5px;
+}
+
+/* line 94, ../scss/modules/_agenda.scss */
+.table-body {
+  float: left;
+  width: 100%;
+  padding: 0 30px;
+  display: inline-block;
+  margin-top: 30px;
+}
+/* line 100, ../scss/modules/_agenda.scss */
+.table-body.width-define {
+  width: calc(100% - 328px) !important;
+}
+/* line 103, ../scss/modules/_agenda.scss */
+.table-body .tablpadd {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 40px;
+  margin: 0;
+  float: left;
+  width: 100%;
+}
+/* line 111, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dde0e8;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+/* line 118, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .stetus, .table-body .tablpadd .screen-body-heding .meting-type, .table-body .tablpadd .screen-body-heding .add-agenda, .table-body .tablpadd .screen-body-heding .previous {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+@media (max-width: 850px) {
+  /* line 118, ../scss/modules/_agenda.scss */
+  .table-body .tablpadd .screen-body-heding .stetus, .table-body .tablpadd .screen-body-heding .meting-type, .table-body .tablpadd .screen-body-heding .add-agenda, .table-body .tablpadd .screen-body-heding .previous {
+    padding: 0 0px;
+  }
+}
+/* line 125, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .stetus, .table-body .tablpadd .screen-body-heding .meting-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+/* line 130, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .stetus label, .table-body .tablpadd .screen-body-heding .meting-type label {
+  font-size: 16px;
+  font-weight: 600;
+}
+/* line 134, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .stetus .mtng-select, .table-body .tablpadd .screen-body-heding .meting-type .mtng-select {
+  margin: 0;
+}
+/* line 136, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .stetus .mtng-select:after, .table-body .tablpadd .screen-body-heding .meting-type .mtng-select:after {
+  display: none;
+}
+/* line 140, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .stetus .mtng-select .select-icon .scren-slct, .table-body .tablpadd .screen-body-heding .meting-type .mtng-select .select-icon .scren-slct {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+/* line 147, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body-heding .previous {
+  padding: 13px 49px !important;
+}
+/* line 151, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .add-agenda {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+/* line 156, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .add-agenda .screen-icon {
+  background-image: url("../images/screen-icon.png");
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 16px;
+  width: 16px;
+  float: left;
+  display: inline-block;
+  margin-right: 15px;
+  border: none;
+}
+/* line 170, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .acodion-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 26px;
+}
+/* line 175, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .acodion-heading p {
+  margin-right: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f87c30;
+}
+/* line 182, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default {
+  border-color: transparent;
+  box-shadow: none !important;
+}
+/* line 185, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #dde0e8;
+}
+/* line 192, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 196, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 10px;
+}
+/* line 201, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span p {
+  margin-right: 40px;
+}
+/* line 204, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span .dlt-icon {
+  background-color: transparent;
+  background-image: url("../images/dlt-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 11px;
+  float: left;
+  display: inline-block;
+  margin-right: 40px;
+  border: none;
+}
+/* line 216, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span a {
+  color: #f87c30;
+}
+/* line 220, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span a.collapsed span.arrow-icon-down {
+  background-image: url("../images/arrow-icon.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 21px;
+  float: left;
+}
+/* line 230, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span a span {
+  padding: 0px;
+}
+/* line 232, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-heading h4 span a span.arrow-icon-down {
+  background-image: url("../images/arrow-icon-up.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 21px;
+  float: left;
+}
+/* line 245, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body {
+  border-top-color: transparent !important;
+}
+/* line 248, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .form-group .glyphicon {
+  margin: 0 5px;
+  cursor: pointer;
+}
+/* line 256, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .meeting-option select {
+  border: 0px !important;
+  border-bottom: 2px solid #ccc !important;
+  border-radius: 0px;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 700;
+  padding-left: 0;
+  background-image: url(../images/select-option-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+/* line 270, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .meeting-option select:focus {
+  border-bottom: 2px solid #f87c30 !important;
+}
+/* line 277, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #dde0e8;
+}
+/* line 282, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body input.form-control {
+  box-shadow: none;
+  outline: none;
+  padding: 30px 12px;
+}
+/* line 288, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body p {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 12px;
+}
+/* line 293, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .acodin-btns {
+  float: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+/* line 302, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .acodin-btns span.file-uplode {
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Safari 3-8 */
+  transform: rotate(180deg);
+  position: relative;
+}
+/* line 308, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .acodin-btns span input {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+}
+/* line 318, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .acodin-btns button {
+  margin-left: 20px;
+}
+/* line 322, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .screen-body .panel-default .panel-body .full-width {
+  width: 100%;
+  display: block;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font-size: 18px;
+  font-weight: 400;
+}
+/* line 334, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table {
+  margin: 0 !important;
+}
+/* line 338, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table thead tr th {
+  font-size: 16px;
+  padding: 0 15px;
+}
+/* line 345, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table td {
+  font-size: 16px;
+  border-bottom: 1px solid #e0dddd !important;
+  padding: 15px !important;
+}
+@media (max-width: 991px) {
+  /* line 345, ../scss/modules/_agenda.scss */
+  .table-body .tablpadd .table td {
+    padding: 10px !important;
+  }
+}
+/* line 352, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table td.text-Scheduled {
+  color: #3a35ff;
+}
+/* line 355, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table td.text-Adjourned {
+  color: #f69001;
+}
+/* line 358, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table td.text-Open {
+  color: #209d07;
+}
+/* line 361, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table td.text-Closed {
+  color: #e30000;
+}
+/* line 364, ../scss/modules/_agenda.scss */
+.table-body .tablpadd .table td a {
+  color: #f87c30;
+  text-transform: uppercase;
+}
+
+/* line 372, ../scss/modules/_agenda.scss */
+.page-next {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 0;
+  right: 100px;
+}
+/* line 381, ../scss/modules/_agenda.scss */
+.page-next .pagination li a {
+  background-color: transparent;
+  border: 2px solid #f87c30;
+  color: #f87c30;
+  border-radius: 100%;
+  margin: 0 5px;
+}
+/* line 387, ../scss/modules/_agenda.scss */
+.page-next .pagination li a.nxt-previus {
+  padding: 6px 9px;
+}
+/* line 390, ../scss/modules/_agenda.scss */
+.page-next .pagination li a:hover {
+  background-color: #f87c30;
+  color: #fff;
+}
+
+/* line 401, ../scss/modules/_agenda.scss */
+#date-timeModal .mtn-slct-icon, .tablpadd .mtn-slct-icon {
+  margin-bottom: 50px;
+}
+/* line 404, ../scss/modules/_agenda.scss */
+#date-timeModal .mtn-slct-icon.slect-style:after, .tablpadd .mtn-slct-icon.slect-style:after {
+  display: none;
+}
+/* line 409, ../scss/modules/_agenda.scss */
+#date-timeModal .mtn-slct-icon .select-icon:after, .tablpadd .mtn-slct-icon .select-icon:after {
+  font-size: 20px;
+  color: #f87c30;
+  right: 21px;
+  top: 8px;
+}
+/* line 417, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr, .tablpadd .time-pikr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* line 423, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .input-group.date, .tablpadd .time-pikr .input-group.date {
+  width: 30%;
+}
+/* line 425, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .input-group.date.timer, .tablpadd .time-pikr .input-group.date.timer {
+  width: 25%;
+}
+@media (max-width: 1100px) {
+  /* line 425, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .input-group.date.timer, .tablpadd .time-pikr .input-group.date.timer {
+    width: 50%;
+  }
+}
+@media (max-width: 1100px) {
+  /* line 423, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .input-group.date, .tablpadd .time-pikr .input-group.date {
+    width: 50%;
+  }
+}
+/* line 434, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .input-group.date label, .tablpadd .time-pikr .input-group.date label {
+  width: 100%;
+  text-align: center;
+}
+/* line 439, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .clender, .tablpadd .time-pikr .clender {
+  width: 40%;
+}
+@media (max-width: 1100px) {
+  /* line 439, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .clender, .tablpadd .time-pikr .clender {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dde0e8;
+  }
+}
+/* line 447, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .clender.meting-clndr, .tablpadd .time-pikr .clender.meting-clndr {
+  width: 50%;
+}
+@media (max-width: 1100px) {
+  /* line 447, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .clender.meting-clndr, .tablpadd .time-pikr .clender.meting-clndr {
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dde0e8;
+  }
+}
+/* line 457, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .clender.meting-clndr .bootstrap-datetimepicker-widget .datepicker table, .tablpadd .time-pikr .clender.meting-clndr .bootstrap-datetimepicker-widget .datepicker table {
+  width: 500px;
+}
+@media (max-width: 1450px) {
+  /* line 457, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .clender.meting-clndr .bootstrap-datetimepicker-widget .datepicker table, .tablpadd .time-pikr .clender.meting-clndr .bootstrap-datetimepicker-widget .datepicker table {
+    width: 300px;
+  }
+}
+@media (max-width: 1100px) {
+  /* line 457, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .clender.meting-clndr .bootstrap-datetimepicker-widget .datepicker table, .tablpadd .time-pikr .clender.meting-clndr .bootstrap-datetimepicker-widget .datepicker table {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+/* line 470, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .clender label, .tablpadd .time-pikr .clender label {
+  width: 100%;
+  text-align: center;
+}
+/* line 476, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .clender .bootstrap-datetimepicker-widget .datepicker table, .tablpadd .time-pikr .clender .bootstrap-datetimepicker-widget .datepicker table {
+  width: 300px;
+}
+@media (max-width: 1100px) {
+  /* line 476, ../scss/modules/_agenda.scss */
+  #date-timeModal .time-pikr .clender .bootstrap-datetimepicker-widget .datepicker table, .tablpadd .time-pikr .clender .bootstrap-datetimepicker-widget .datepicker table {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+/* line 489, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .timepicker .table-condensed td a, .tablpadd .time-pikr .timepicker .table-condensed td a {
+  color: #f87c30;
+}
+/* line 492, ../scss/modules/_agenda.scss */
+#date-timeModal .time-pikr .timepicker .table-condensed td button, .tablpadd .time-pikr .timepicker .table-condensed td button {
+  background-color: transparent;
+  border-color: #f87c30;
+  color: #f87c30;
+}
+
+/* line 503, ../scss/modules/_agenda.scss */
+.btn-position {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #dde0e8;
+  margin-top: 15px;
+  padding-bottom: 25px;
+}
+/* line 510, ../scss/modules/_agenda.scss */
+.btn-position.no-row {
+  border: none !important;
+  padding-top: 00px !important;
+}
+/* line 513, ../scss/modules/_agenda.scss */
+.btn-position.no-row button {
+  margin-left: 30px;
+  margin-right: 0px !important;
+}
+/* line 518, ../scss/modules/_agenda.scss */
+.btn-position button {
+  margin-right: 30px;
+}
+
+/* line 522, ../scss/modules/_agenda.scss */
+.add-modal {
+  padding: 25px;
+  border-color: #f87c30;
+  width: 100%;
+}
+/* line 539, ../scss/modules/_agenda.scss */
+.add-modal li input.lst-inpt {
+  margin-bottom: 10px;
+}
+/* line 542, ../scss/modules/_agenda.scss */
+.add-modal li input.form-control {
+  border: none;
+  border-bottom: 1px solid #dde0e8;
+  padding: 7px 5px;
+  margin-bottom: 20px;
+  box-shadow: none;
+  border-radius: 0%;
+}
+/* line 549, ../scss/modules/_agenda.scss */
+.add-modal li input.form-control:hover, .add-modal li input.form-control:active, .add-modal li input.form-control:focus {
+  border-bottom-color: #f87c30;
+}
+
+/* line 560, ../scss/modules/_agenda.scss */
+#datetimepicker12 .bootstrap-datetimepicker-widget table td.active {
+  background-color: #f87c30 !important;
+}
+/* line 562, ../scss/modules/_agenda.scss */
+#datetimepicker12 .bootstrap-datetimepicker-widget table td.active:hover, #datetimepicker12 .bootstrap-datetimepicker-widget table td.active:active, #datetimepicker12 .bootstrap-datetimepicker-widget table td.active:focus {
+  background-color: #f87c30 !important;
+}
+
+/* line 571, ../scss/modules/_agenda.scss */
+.members h4 {
+  font-size: 27px;
+  color: #333;
+}
+/* line 575, ../scss/modules/_agenda.scss */
+.members .member-search {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+/* line 582, ../scss/modules/_agenda.scss */
+.members .member-search .input-fild {
+  width: 50%;
+}
+/* line 584, ../scss/modules/_agenda.scss */
+.members .member-search .input-fild input {
+  outline: none;
+  box-shadow: none;
+  padding: 25px 20px;
+  border: none;
+  border-bottom: 1px solid #dde0e8;
+  border-radius: 0;
+}
+/* line 591, ../scss/modules/_agenda.scss */
+.members .member-search .input-fild input:hover, .members .member-search .input-fild input:active, .members .member-search .input-fild input:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #f87c30;
+}
+/* line 598, ../scss/modules/_agenda.scss */
+.members .member-search .btn-section {
+  width: 105px;
+}
+/* line 602, ../scss/modules/_agenda.scss */
+.members .member-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+/* line 608, ../scss/modules/_agenda.scss */
+.members .member-list .name-section {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+}
+/* line 612, ../scss/modules/_agenda.scss */
+.members .member-list .name-section h4 {
+  font-size: 20px;
+}
+/* line 615, ../scss/modules/_agenda.scss */
+.members .member-list .name-section a {
+  margin-left: 15px;
+  color: #f87c30;
+  font-size: 16px;
+}
+/* line 620, ../scss/modules/_agenda.scss */
+.members .member-list .name-section span {
+  margin-left: 15px;
+}
+/* line 623, ../scss/modules/_agenda.scss */
+.members .member-list .name-section i {
+  font-size: 18px;
+}
+/* line 627, ../scss/modules/_agenda.scss */
+.members .member-list .icon-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 150px;
+  justify-content: space-evenly;
+}
+/* line 637, ../scss/modules/_agenda.scss */
+.members .member-list .icon-section button:hover i {
+  color: #f87c30;
+}
+/* line 641, ../scss/modules/_agenda.scss */
+.members .member-list .icon-section button i {
+  font-size: 18px;
+  color: #333;
+}
+
+/* line 649, ../scss/modules/_agenda.scss */
+.midd-panl {
+  height: 50px;
+  float: left;
+  width: 328px;
+  margin-top: 30px;
+  padding-left: 15px;
+}
+/* line 655, ../scss/modules/_agenda.scss */
+.midd-panl .all-drag-contant {
+  border: 1px solid red;
+}
+
+/* line 659, ../scss/modules/_agenda.scss */
+.attech-model-heding {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 30px;
+}
+/* line 665, ../scss/modules/_agenda.scss */
+.attech-model-heding h4 {
+  font-size: 22px;
+}
+
+/* line 671, ../scss/modules/_agenda.scss */
+.add-files {
+  padding: 20px 0px 20px 0px;
+}
+/* line 673, ../scss/modules/_agenda.scss */
+.add-files h4 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* line 679, ../scss/modules/_agenda.scss */
+.atch-modal-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #dde0e8;
+  padding-top: 30px;
+}
+/* line 685, ../scss/modules/_agenda.scss */
+.atch-modal-btns .orng-border-btn {
+  margin-right: 20px;
+}
+
+/* line 690, ../scss/modules/_agenda.scss */
+.dsbord-nav .position-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  float: left;
+  width: 100%;
+  padding: 0 20px;
+}
+@media (max-width: 991px) {
+  /* line 690, ../scss/modules/_agenda.scss */
+  .dsbord-nav .position-navbar {
+    flex-direction: column;
+  }
+}
+/* line 700, ../scss/modules/_agenda.scss */
+.dsbord-nav .position-navbar .ToplogoSec {
+  width: 100%;
+}
+/* line 703, ../scss/modules/_agenda.scss */
+.dsbord-nav .position-navbar .navbar-right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* line 2, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main {
+  padding-left: 0px !important;
+}
+/* line 4, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail {
+  border: solid #e8e8e8 1px;
+  padding: 0px 20px 30px 20px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+/* line 11, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  /* 1024 px*/
+}
+@media (max-width: 1024px) {
+  /* line 11, ../scss/modules/_dashboard.scss */
+  .main_container.dshbord_main .org_detail .detail_sections {
+    flex-direction: column;
+  }
+}
+/* line 19, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .second_sec .calendr {
+  border: solid #e8e8e8 1px;
+  padding: 10px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+/* line 26, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .second_sec .calendr .cldr_head {
+  background-color: #f87c30;
+  padding: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -10px;
+  color: white;
+}
+/* line 36, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .second_sec .calendr .cldr_ftr {
+  background-color: whitesmoke;
+  padding: 10px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px;
+}
+/* line 46, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .second_sec .calendr .cldr_mid p {
+  margin: 0px;
+  padding: 30px 0px;
+  text-align: center;
+  font-size: 26px;
+}
+/* line 57, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .thrd_sec ul {
+  margin-top: 10px;
+}
+/* line 59, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .thrd_sec ul li {
+  padding: 10px 0px;
+}
+/* line 61, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .thrd_sec ul li button {
+  margin-right: 10px;
+}
+/* line 64, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .thrd_sec ul li span {
+  margin: 0px 10px;
+}
+/* line 68, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .detail_sections .thrd_sec ul li a:hover {
+  color: #f87c30;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+/* line 77, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .org_menu {
+  background-color: whitesmoke;
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* line 85, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .org_menu ul li {
+  display: inline;
+  margin-right: 10px;
+}
+/* line 88, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .org_menu ul li a {
+  text-decoration: none;
+  color: black;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+/* line 92, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail .org_menu ul li a:hover {
+  color: #f87c30;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+/* line 100, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail h3 {
+  background-color: #eeeeee;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: black;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+/* line 109, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+/* line 113, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left {
+  width: 250px;
+  border-right: 1px solid #eee;
+  box-sizing: border-box;
+}
+/* line 118, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left h2 {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+  font-size: 25px;
+}
+/* line 125, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* line 129, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left p {
+  font-size: 16px;
+  font-weight: 300;
+}
+/* line 133, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left .btn-send {
+  width: 100%;
+  border-radius: 35px;
+}
+/* line 137, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left .btn-cancel {
+  background: #333;
+  width: 100%;
+  border-radius: 35px;
+  padding: 10px 25px;
+  color: #fff;
+  transition: all .25s;
+}
+/* line 144, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-left .btn-cancel:hover {
+  background: #000;
+}
+/* line 150, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right {
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+  padding-left: 35px;
+}
+/* line 155, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right h2 {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+  font-size: 25px;
+}
+/* line 161, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right p {
+  font-size: 20px;
+}
+/* line 165, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .nav-pills > li + li {
+  margin-left: 0;
+}
+/* line 168, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .nav-pills > li a {
+  border-radius: 0px !important;
+}
+/* line 171, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .nav-pills > li a {
+  color: #333;
+}
+/* line 174, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .nav-pills > li.active a {
+  background: #f87c30;
+  color: #fff;
+}
+/* line 179, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .check-list {
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+/* line 184, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .message-block label {
+  margin-bottom: 10px;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 400;
+}
+/* line 190, ../scss/modules/_dashboard.scss */
+.main_container.dshbord_main .org_detail.email-minutes-block .em-min-right .message-block textarea {
+  resize: none;
+  border-radius: 0px;
+}
+
+/* line 202, ../scss/modules/_dashboard.scss */
+.meeting-time-block {
+  display: flex;
+  align-items: center;
+}
+/* line 206, ../scss/modules/_dashboard.scss */
+.meeting-time-block label {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 130px;
+  font-weight: 400;
+  font-size: 14px;
+}
+/* line 214, ../scss/modules/_dashboard.scss */
+.meeting-time-block select {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 250px;
+  border: 1px solid #900;
+  width: auto;
+  display: inline-block;
+  margin: 0 5px 0 2px;
+}
+/* line 223, ../scss/modules/_dashboard.scss */
+.meeting-time-block .bootstrap-datetimepicker-widget table td {
+  height: 16px !important;
+  line-height: 16px !important;
+  width: 20px !important;
+  padding: 0px !important;
+}
+/* line 230, ../scss/modules/_dashboard.scss */
+.meeting-time-block .bootstrap-datetimepicker-widget .timepicker-hours table td,
+.meeting-time-block .bootstrap-datetimepicker-widget .timepicker-minutes table td {
+  height: 30px !important;
+  line-height: 30px !important;
+  width: 30px !important;
+  padding: 5px !important;
+}
+/* line 236, ../scss/modules/_dashboard.scss */
+.meeting-time-block .bootstrap-datetimepicker-widget table td span {
+  width: 39px !important;
+  height: 39px !important;
+  line-height: 40px !important;
+}
+/* line 241, ../scss/modules/_dashboard.scss */
+.meeting-time-block select {
+  border: 0px !important;
+  border-bottom: 2px solid #ccc !important;
+  border-radius: 0px;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-weight: 700;
+  padding-left: 0;
+  background-image: url(../images/select-option-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+/* line 255, ../scss/modules/_dashboard.scss */
+.meeting-time-block select:focus {
+  border-bottom: 2px solid #f87c30 !important;
+}
+
+/* line 262, ../scss/modules/_dashboard.scss */
+.message-popup {
+  width: 600px;
+  margin: 30px auto;
+  top: 50%;
+  transform: translateY(-80%) !important;
+}
+/* line 267, ../scss/modules/_dashboard.scss */
+.message-popup .modal-content {
+  box-shadow: none;
+  padding-bottom: 25px;
+}
+/* line 271, ../scss/modules/_dashboard.scss */
+.message-popup .modal-header {
+  border-bottom: 0px;
+}
+/* line 275, ../scss/modules/_dashboard.scss */
+.message-popup .modal-body h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+/* line 279, ../scss/modules/_dashboard.scss */
+.message-popup .modal-body p {
+  font-size: 18px;
+  color: #333;
+}
+/* line 284, ../scss/modules/_dashboard.scss */
+.message-popup .modal-footer {
+  text-align: center !important;
+  border-top: 0px !important;
+}
+
+/* line 5, ../scss/modules/_documents.scss */
+.table-body .alert.alert_msg a:hover {
+  color: black;
+}
+/* line 12, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 12, ../scss/modules/_documents.scss */
+  .table-body .tablpadd .doc_sections {
+    flex-direction: column;
+  }
+}
+/* line 20, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar {
+  width: 300px;
+  height: 100%;
+  margin-top: 35px;
+  margin-right: 60px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 20, ../scss/modules/_documents.scss */
+  .table-body .tablpadd .doc_sections .docleft_bar {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+/* line 31, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li {
+  padding: 10px;
+  border-bottom: solid 1px #eeeeee;
+}
+/* line 34, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li:hover {
+  background-color: #f87c30;
+  color: white;
+}
+/* line 38, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li:hover .icons a {
+  color: #FFF;
+}
+/* line 43, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li .icons {
+  float: right;
+}
+/* line 45, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li .icons a {
+  color: #000;
+  text-decoration: none;
+}
+/* line 48, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li .icons a:first-child {
+  margin-right: 30px;
+}
+/* line 53, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docleft_bar ul li:last-child {
+  border-bottom: none;
+}
+/* line 59, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docrgt_sec {
+  width: calc(100% - 300px);
+  height: 100%;
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 59, ../scss/modules/_documents.scss */
+  .table-body .tablpadd .doc_sections .docrgt_sec {
+    width: 100%;
+  }
+}
+/* line 66, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docrgt_sec .srch_bar input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+/* line 74, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docrgt_sec table thead {
+  border-bottom: solid 2px #eeeeee;
+  border-top: solid 1px #eeeeee;
+}
+/* line 77, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docrgt_sec table thead th {
+  padding: 15px;
+}
+/* line 82, ../scss/modules/_documents.scss */
+.table-body .tablpadd .doc_sections .docrgt_sec table tbody td {
+  font-size: 14px;
+}
+/* line 89, ../scss/modules/_documents.scss */
+.table-body .tablpadd .orangeBtn {
+  margin: 10px 0px;
+}
+/* line 93, ../scss/modules/_documents.scss */
+.table-body.table-responsive {
+  /* 767 px*/
+}
+@media (max-width: 767px) {
+  /* line 93, ../scss/modules/_documents.scss */
+  .table-body.table-responsive {
+    border: none;
+  }
+}
+
+/* line 2, ../scss/modules/_preview.scss */
+.tablpadd .preview-heding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 2, ../scss/modules/_preview.scss */
+  .tablpadd .preview-heding {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+/* line 12, ../scss/modules/_preview.scss */
+.tablpadd .top_btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 12, ../scss/modules/_preview.scss */
+  .tablpadd .top_btns {
+    margin-top: 20px;
+  }
+}
+/* line 19, ../scss/modules/_preview.scss */
+.tablpadd .top_btns .orangeBtn {
+  margin: 10px;
+}
+/* line 24, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .agenda_template {
+  background-color: #f87c30;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* line 30, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .agenda_template p {
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 700;
+}
+/* line 37, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl .tabl-hedings {
+  color: #f87c30;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+/* line 44, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl .pehragraph {
+  color: #555557;
+  margin-top: 15px;
+}
+/* line 47, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl .pehragraph span {
+  font-weight: 700;
+}
+/* line 51, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table {
+  border: solid 1px #ddad65;
+}
+/* line 55, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table tbody tr th {
+  padding: 5px;
+  font-size: 14px !important;
+  border: solid 1px #ddad65 !important;
+}
+/* line 59, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table tbody tr th.td-width {
+  width: 20%;
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 59, ../scss/modules/_preview.scss */
+  .tablpadd .preview_sec .preview_tbl table tbody tr th.td-width {
+    width: 15%;
+  }
+}
+/* line 66, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table tbody tr td {
+  border: solid 1px #ddad65 !important;
+  border-bottom: none;
+  padding: 5px !important;
+  font-size: 14px !important;
+}
+/* line 71, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table tbody tr td.td-width {
+  width: 20%;
+  /* 991 px*/
+}
+@media (max-width: 991px) {
+  /* line 71, ../scss/modules/_preview.scss */
+  .tablpadd .preview_sec .preview_tbl table tbody tr td.td-width {
+    width: 15%;
+  }
+}
+/* line 80, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table.secnd_tbl {
+  margin-top: 30px !important;
+}
+/* line 84, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl table.secnd_tbl tr td p, .tablpadd .preview_sec .preview_tbl table.secnd_tbl tr td i {
+  font-size: 13px;
+}
+/* line 92, ../scss/modules/_preview.scss */
+.tablpadd .preview_sec .preview_tbl .agenda-items-tabls .table {
+  margin-bottom: 20px !important;
+}
+
+/* line 101, ../scss/modules/_preview.scss */
+.timers-screen {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 32px;
+}
+/* line 107, ../scss/modules/_preview.scss */
+.timers-screen .pause-btn {
+  margin: 0 20px;
+}
+/* line 110, ../scss/modules/_preview.scss */
+.timers-screen .timers-setion {
+  padding: 6px 20px;
+  font-size: 19px;
+}
+/* line 113, ../scss/modules/_preview.scss */
+.timers-screen .timers-setion:hover {
+  background: #f87c30 !important;
+  border: solid 1px #f87c30 !important;
+}
