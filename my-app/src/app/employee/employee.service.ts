@@ -30,7 +30,7 @@ export class EmployeeService {
 
     return this.http.get<Employee[]>(url)
       .pipe(
-        tap(heroes => this.log('fetched heroes')),
+      tap(heroes => console.log(heroes)),
         catchError(this.handleError('getHeroes', []))
       );
   }

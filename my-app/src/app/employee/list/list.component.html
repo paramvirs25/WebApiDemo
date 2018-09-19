@@ -40,8 +40,8 @@
       <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
           <span>
-            <p>{{hero.ID}}</p>
-            <p><a class="badge" routerLink="/employee-detail/{{hero.ID}}">{{hero.Name}}</a></p>
+            <p>{{hero.Id}}</p>
+            <p><a class="badge" routerLink="/employee-detail/{{hero.Id}}">{{hero.Name}}</a></p>
           </span>
           <span>
             <button class="dlt-icon"></button>
@@ -62,7 +62,7 @@
   <div>
     <ul class="heroes">
       <li *ngFor="let hero of employees">
-        {{hero.ID}} <a class="badge" routerLink="/employee-detail/{{hero.ID}}">{{hero.Name}}</a>
+        {{hero.ID}} <a class="badge" routerLink="/employee-detail/{{hero.Id}}">{{hero.Name}}</a>
       </li>
     </ul>
   </div>

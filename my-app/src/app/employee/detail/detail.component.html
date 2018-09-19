@@ -1,5 +1,51 @@
 
 <div *ngIf="employee">
-  Detail works for {{employee.Name}}
+  
+  <!--login start -->
+  <div class="LoginOuterDiv">
+    <div class="LoginInnerDiv">
+
+      <div>
+        <h4 class="text-uppercase">Employee Details</h4>
+        <hr />
+        <br />
+      </div>
+      
+        <div class="loginInfo LoginSec">
+
+          <!--login start-->
+          <div class="form-row">
+            <label for="txtEmpName">Employee Name</label>
+            <input type="text" class="inputfld" placeholder="Employee Name" id="txtEmpName" [(ngModel)]="employee.Name">
+          </div>
+          <div class="form-row">
+            <br />
+            <label for="txtJoiningDate">Joining Date</label>
+            <input type="text" class="inputfld" placeholder="Joining Date" id="txtJoiningDate" [(ngModel)]="employee.JoiningDate">
+          </div>
+          <div class="form-row">
+            <br />
+            <label for="txtAge">Age</label>
+            <input type="text" class="inputfld" placeholder="Age" id="txtAge" [(ngModel)]="employee.Age">
+          </div>
+
+
+          <div class="form-row text-center">
+            <a href="assets_mangement.html" class="orangeBtn login">Update</a>
+          </div>
+
+
+        </div><!--login End-->
+
+
+      
+    </div>
+  </div>
+  <!--login end -->
 </div>
+
+
+
+  
+
 
