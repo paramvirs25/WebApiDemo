@@ -22,4 +22,12 @@ export class ListComponent implements OnInit {
   getAllEmployees(): void {
     this.employeeService.getAll().subscribe(emp => this.employees = emp);
   }
+
+  deleteEmployee(emp: Employee): void {
+    this.employeeService.deleteEmployee(emp.Id).subscribe(empDeleted => this.deleteComplete());
+  }
+
+  deleteComplete() {
+    this.getAllEmployees();
+  }
 }

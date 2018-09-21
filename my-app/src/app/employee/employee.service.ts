@@ -11,24 +11,19 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-  private employeesUrl = 'api/employees';  // URL to web api
-  
   constructor(private http: HttpClient, private msgSer: MessageService) {
   }
 
   /** GET heroes from the server */
   getAll(): Observable<Employee[]> {
-    const url = `${environment.webApiUrl}/${this.employeesUrl}`;
-
     this.msgSer.add('Called GetALL()');
 
-    return this.http.get<Employee[]>(url)
+    return this.http.get<Employee[]>(this.getEmployeeWebAPiUrl())
       .pipe(
       tap(heroes => console.log(heroes)),
         catchError(this.handleError('getHeroes', []))
@@ -37,13 +32,50 @@ export class EmployeeService {
 
   /** GET hero by id. Will 404 if id not found */
   getEmployee(id: number): Observable<Employee> {
-    const url = `${environment.webApiUrl}/${this.employeesUrl}/${id}`;
+    const url = `${this.getEmployeeWebAPiUrl()}/${id}`;
 
     return this.http.get<Employee>(url)
       .pipe(
         tap(_ => this.log(`fetched id=${id}`)),
         catchError(this.handleError<Employee>(`getHero id=${id}`))
       );
+  }
+
+  /** PUT: update the employee on the server */
+  update(emp: Employee){
+
+    console.log('Service called')
+    console.log(emp)
+
+    //`${api}/hero/`
+    const url = `${this.getEmployeeWebAPiUrl()}/PostEmployee`;
+    //return this.http.post<String>(url, "Hello", httpOptions);
+    return this.http.post<Employee>(url, emp, httpOptions);
+
+    //const url = `${environment.webApiUrl}${this.employeesUrl}?id=${emp.Id}`;
+
+    //return this.http.put<Employee>(url, emp, httpOptions);
+
+    //return this.http.put(url, emp, httpOptions).
+    //  pipe(tap(_ => this.log(`updated employee id=${emp.Id}`)),
+    //    catchError(this.handleError<any>('updateHero'))
+    //  );
+  }
+
+  /** Delete hero by id*/
+  deleteEmployee(id: number): Observable<Employee> {
+    const url = `${this.getEmployeeWebAPiUrl()}/${id}`;
+
+    return this.http.delete<Employee>(url)
+      .pipe(
+        tap(_ => this.log(`fetched id=${id}`)),
+        catchError(this.handleError<Employee>(`getHero id=${id}`))
+      );
+  }
+
+  /**Get Url to WebApi**/
+  private getEmployeeWebAPiUrl(): string {
+    return `${environment.webApiUrl}Employees1`;
   }
 
   /**

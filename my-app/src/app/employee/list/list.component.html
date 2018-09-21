@@ -25,8 +25,8 @@
       </label>
     </div>
   </div>
-  <div class="add-agenda"><button class="screen-icon"></button>Add Agenda Items</div>
-  <button class="previous orangeBtn">Preview</button>
+  <!--<div class="add-agenda"><button class="screen-icon">Add Employee</button></div>-->
+  <button class="previous orangeBtn" routerLink="/employee-detail/0">Add Employee</button>
 </div>
 
 <div class="screen-body mCustomScrollbar" data-mcs-theme="dark">
@@ -44,7 +44,7 @@
             <p><a class="badge" routerLink="/employee-detail/{{hero.Id}}">{{hero.Name}}</a></p>
           </span>
           <span>
-            <button class="dlt-icon"></button>
+            <button class="dlt-icon" (click)="deleteEmployee(hero)"></button>
             <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               <span class="arrow-icon-down arrow-icon-up"></span>
             </a>
@@ -58,14 +58,5 @@
   <br />
   <br />
   <br />
-  Old display
-  <div>
-    <ul class="heroes">
-      <li *ngFor="let hero of employees">
-        {{hero.ID}} <a class="badge" routerLink="/employee-detail/{{hero.Id}}">{{hero.Name}}</a>
-      </li>
-    </ul>
-  </div>
-
 
 </div>

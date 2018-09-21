@@ -28,8 +28,25 @@ export class DetailComponent implements OnInit {
 
   getEmployee(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    
-    this.employeeService.getEmployee(id).subscribe(emp => this.employee = emp);
+
+    if (id == 0) {
+      this.employee = new Employee();
+      this.employee.Id = 0;
+    }
+    else {
+      this.employeeService.getEmployee(id).subscribe(emp => this.employee = emp);
+    }
   }
+
+  save(): void {
+    console.log(this.employee);
+    this.employeeService.update(this.employee)
+      .subscribe(() => this.goBack());
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
 
 }

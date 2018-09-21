@@ -23,7 +23,7 @@ namespace WebAPIDemo.Controllers
         {
             using (var context = new WebAPIDemoDBEntities())
             {
-                return Map(context.Employees.ToList());
+                return MapFromDAL(context.Employees.ToList());
 
             }
 
@@ -38,24 +38,37 @@ namespace WebAPIDemo.Controllers
                 {
                     return NotFound();
                 }
-                return Ok(Map(employee));
+                return Ok(MapFromDAL(employee));
 
             }
-
-            //var employee = employees.FirstOrDefault((p) => p.Id == id);
-            //if (employee == null)
-            //{
-            //    return NotFound();
-            //}
-            //return Ok(employee);
         }
 
-        public List<Models.Employee> Map(List<WebAPI_DB.Employee> emp)
+        [HttpPost]
+        public IHttpActionResult UpdateEmployee(Models.Employee emp)
         {
-            return emp.Select(x => Map(x)).ToList();
+            using (var context = new WebAPIDemoDBEntities())
+            {
+                var employee = context.Employees.ToList().FirstOrDefault((p) => p.Id == emp.Id);
+                employee = MapToDAL(emp, employee);
+
+                context.SaveChanges();
+
+                //var employee = context.Employees.ToList().FirstOrDefault((p) => p.Id == id);
+                //if (employee == null)
+                //{
+                //    return NotFound();
+                //}
+                return Ok(employee);
+
+            }
         }
 
-        public Models.Employee Map(WebAPI_DB.Employee emp)
+        public List<Models.Employee> MapFromDAL(List<WebAPI_DB.Employee> emp)
+        {
+            return emp.Select(x => MapFromDAL(x)).ToList();
+        }
+
+        public Models.Employee MapFromDAL(WebAPI_DB.Employee emp)
         {
             return new Models.Employee()
             {
@@ -64,6 +77,21 @@ namespace WebAPIDemo.Controllers
                 JoiningDate = emp.JoiningDate,
                 Age = emp.Age
             };
+        }
+
+        public WebAPI_DB.Employee MapToDAL(Models.Employee emp, WebAPI_DB.Employee empDAL)
+        {
+            if(empDAL == null)
+            {
+                empDAL = new WebAPI_DB.Employee();
+            }
+
+            empDAL.Id = emp.Id;
+            empDAL.Name = emp.Name;
+            empDAL.JoiningDate = emp.JoiningDate;
+            empDAL.Age = emp.Age;
+
+            return empDAL;
         }
     }
 }
