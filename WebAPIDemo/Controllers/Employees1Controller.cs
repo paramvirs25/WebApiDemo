@@ -13,11 +13,11 @@ namespace WebAPIDemo.Controllers
     public class Employees1Controller : ApiController
     {
         // GET api/<controller>
-        public IEnumerable<Models.Employee> Get()
+        public IHttpActionResult Get()
         {
             using (var context = new WebAPIDemoDBEntities())
             {
-                return MapFromDAL(context.Employees.ToList());
+                return Ok(MapFromDAL(context.Employees.ToList()));
 
             }
         }
@@ -111,7 +111,7 @@ namespace WebAPIDemo.Controllers
                     context.Employees.Remove(employee);
                     context.SaveChanges();
 
-                    return Ok(MapFromDAL(employee));
+                    return Get();
                 }
             }
         }
