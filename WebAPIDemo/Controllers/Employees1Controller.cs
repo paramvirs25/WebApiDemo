@@ -6,13 +6,53 @@ using System.Net.Http;
 using System.Web.Http;
 
 using WebAPIDemo.Models;
+using WebAPIDemo.Services;
 using WebAPI_DB;
 
 namespace WebAPIDemo.Controllers
 {
+    //[Authorize]
     public class Employees1Controller : ApiController
     {
+        //[AllowAnonymous]
+        //[HttpPost]
+        //public IHttpActionResult Authenticate([FromBody]Models.Employee emp)
+        //{
+        //    Models.Employee employee = new EmployeeService().Authenticate(emp.Username, emp.Password);
+
+        //    if (employee == null)
+        //        return BadRequest("Username or password is incorrect");
+
+        //    //var tokenHandler = new JwtSecurityTokenHandler();
+        //    //var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+        //    //var tokenDescriptor = new SecurityTokenDescriptor
+        //    //{
+        //    //    Subject = new ClaimsIdentity(new Claim[]
+        //    //    {
+        //    //        new Claim(ClaimTypes.Name, user.Id.ToString())
+        //    //    }),
+        //    //    Expires = DateTime.UtcNow.AddDays(7),
+        //    //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        //    //};
+        //    //var token = tokenHandler.CreateToken(tokenDescriptor);
+        //    //var tokenString = tokenHandler.WriteToken(token);
+
+        //    // return basic user info (without password) and token to store client side
+        //    //return Ok(new
+        //    //{
+        //    //    Id = user.Id,
+        //    //    Username = user.Username,
+        //    //    FirstName = user.FirstName,
+        //    //    LastName = user.LastName,
+        //    //    Token = tokenString
+        //    //});
+
+        //    employee.Token = "";
+        //    return Ok(employee);
+        //}
+
         // GET api/<controller>
+        [Authorize]
         public IHttpActionResult Get()
         {
             using (var context = new WebAPIDemoDBEntities())
@@ -128,7 +168,9 @@ namespace WebAPIDemo.Controllers
                 Id = emp.Id,
                 Name = emp.Name,
                 JoiningDate = emp.JoiningDate,
-                Age = emp.Age
+                Age = emp.Age,
+                Username = emp.Username,
+                Password = emp.Password
             };
         }
 
@@ -143,6 +185,8 @@ namespace WebAPIDemo.Controllers
             empDAL.Name = emp.Name;
             empDAL.JoiningDate = emp.JoiningDate;
             empDAL.Age = emp.Age;
+            empDAL.Username = emp.Username;
+            empDAL.Password = emp.Password;
 
             return empDAL;
         }

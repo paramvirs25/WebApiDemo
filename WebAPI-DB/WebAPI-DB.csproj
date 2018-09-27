@@ -88,6 +88,7 @@
       <DependentUpon>Office.edmx</DependentUpon>
       <LastGenOutput>Office.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Office.edmx.sql" />
     <Content Include="Office.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Office.edmx</DependentUpon>
