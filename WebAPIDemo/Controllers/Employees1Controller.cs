@@ -1,55 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-
-using WebAPIDemo.Models;
-using WebAPIDemo.Services;
 using WebAPI_DB;
+using WebAPIDemo.Services;
 
 namespace WebAPIDemo.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class Employees1Controller : ApiController
     {
-        //[AllowAnonymous]
-        //[HttpPost]
-        //public IHttpActionResult Authenticate([FromBody]Models.Employee emp)
-        //{
-        //    Models.Employee employee = new EmployeeService().Authenticate(emp.Username, emp.Password);
+        private EmployeeService _employeeService;
 
-        //    if (employee == null)
-        //        return BadRequest("Username or password is incorrect");
+        public Employees1Controller()
+        {
+            _employeeService = new EmployeeService();
+        }
 
-        //    //var tokenHandler = new JwtSecurityTokenHandler();
-        //    //var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
-        //    //var tokenDescriptor = new SecurityTokenDescriptor
-        //    //{
-        //    //    Subject = new ClaimsIdentity(new Claim[]
-        //    //    {
-        //    //        new Claim(ClaimTypes.Name, user.Id.ToString())
-        //    //    }),
-        //    //    Expires = DateTime.UtcNow.AddDays(7),
-        //    //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-        //    //};
-        //    //var token = tokenHandler.CreateToken(tokenDescriptor);
-        //    //var tokenString = tokenHandler.WriteToken(token);
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("api/Employees1/Authenticate")]
+        public IHttpActionResult Authenticate([FromBody]Models.Employee emp)
+        {
+            Models.Employee authenticatedEmployee = _employeeService.Authenticate(emp.Username, emp.Password);
 
-        //    // return basic user info (without password) and token to store client side
-        //    //return Ok(new
-        //    //{
-        //    //    Id = user.Id,
-        //    //    Username = user.Username,
-        //    //    FirstName = user.FirstName,
-        //    //    LastName = user.LastName,
-        //    //    Token = tokenString
-        //    //});
+            if (authenticatedEmployee == null)
+            {
+                return BadRequest("Username or password is incorrect");
+            }
 
-        //    employee.Token = "";
-        //    return Ok(employee);
-        //}
+            var tokenString = _employeeService.GetToken(authenticatedEmployee);
+
+            // return basic user info (without password) and token to store client side
+            //return Ok(new
+            //{
+            //    Id = user.Id,
+            //    Username = user.Username,
+            //    FirstName = user.FirstName,
+            //    LastName = user.LastName,
+            //    Token = tokenString
+            //});
+
+            authenticatedEmployee.Token = tokenString;
+            return Ok(authenticatedEmployee);
+        }
 
         // GET api/<controller>
         [Authorize]

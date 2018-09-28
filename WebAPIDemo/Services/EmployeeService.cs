@@ -1,6 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+
 using WebAPIDemo.Models;
 //using WebAPIDemo.Helpers;
 using WebAPI_DB;
@@ -26,58 +32,78 @@ namespace WebAPIDemo.Services
         //    _context = context;
         //}
 
-        //public Models.Employee Authenticate(string username, string password)
-        //{
-        //    if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-        //        return null;
+        public Models.Employee Authenticate(string username, string password)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                return null;
 
-        //    using (var context = new WebAPIDemoDBEntities())
-        //    {
-        //        var emp = context.Employees.SingleOrDefault(x => x.Username == username && x.Password == password);
+            using (var context = new WebAPIDemoDBEntities())
+            {
+                var emp = context.Employees.SingleOrDefault(x => x.Username == username && x.Password == password);
 
-        //        // check if user exists
-        //        if (emp == null)
-        //            return null;
+                // check if user exists
+                if (emp == null)
+                    return null;
 
-        //        // authentication successful
-        //        return MapFromDAL(emp);
-        //    }
-        //}
+                // authentication successful
+                return MapFromDAL(emp);
+            }
+        }
 
-        //public List<Models.Employee> MapFromDAL(List<WebAPI_DB.Employee> emp)
-        //{
-        //    return emp.Select(x => MapFromDAL(x)).ToList();
-        //}
+        public string GetToken(Models.Employee emp)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            //var key = Encoding.ASCII.GetBytes(WebConfigurationManager.AppSettings["DevKey"].ToString());
+            var key = Encoding.ASCII.GetBytes("This is a secret key");
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim(ClaimTypes.Name, emp.Id.ToString())
+                }),
+                Expires = DateTime.UtcNow.AddMinutes(20),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
 
-        //public Models.Employee MapFromDAL(WebAPI_DB.Employee emp)
-        //{
-        //    return new Models.Employee()
-        //    {
-        //        Id = emp.Id,
-        //        Name = emp.Name,
-        //        JoiningDate = emp.JoiningDate,
-        //        Age = emp.Age,
-        //        Username = emp.Username,
-        //        Password = emp.Password
-        //    };
-        //}
+            return tokenString;
+        }
 
-        //public WebAPI_DB.Employee MapToDAL(Models.Employee emp, WebAPI_DB.Employee empDAL)
-        //{
-        //    if (empDAL == null)
-        //    {
-        //        empDAL = new WebAPI_DB.Employee();
-        //    }
+        public List<Models.Employee> MapFromDAL(List<WebAPI_DB.Employee> emp)
+        {
+            return emp.Select(x => MapFromDAL(x)).ToList();
+        }
 
-        //    empDAL.Id = emp.Id;
-        //    empDAL.Name = emp.Name;
-        //    empDAL.JoiningDate = emp.JoiningDate;
-        //    empDAL.Age = emp.Age;
-        //    empDAL.Username = emp.Username;
-        //    empDAL.Password = emp.Password;
+        public Models.Employee MapFromDAL(WebAPI_DB.Employee emp)
+        {
+            return new Models.Employee()
+            {
+                Id = emp.Id,
+                Name = emp.Name,
+                JoiningDate = emp.JoiningDate,
+                Age = emp.Age,
+                Username = emp.Username,
+                Password = emp.Password
+            };
+        }
 
-        //    return empDAL;
-        //}
+        public WebAPI_DB.Employee MapToDAL(Models.Employee emp, WebAPI_DB.Employee empDAL)
+        {
+            if (empDAL == null)
+            {
+                empDAL = new WebAPI_DB.Employee();
+            }
+
+            empDAL.Id = emp.Id;
+            empDAL.Name = emp.Name;
+            empDAL.JoiningDate = emp.JoiningDate;
+            empDAL.Age = emp.Age;
+            empDAL.Username = emp.Username;
+            empDAL.Password = emp.Password;
+
+            return empDAL;
+        }
 
         //public IEnumerable<User> GetAll()
         //{

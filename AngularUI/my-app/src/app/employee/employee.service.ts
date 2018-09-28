@@ -63,7 +63,7 @@ export class EmployeeService {
   }
 
   /** Delete hero by id*/
-  deleteEmployee(id: number): Observable<Employee[]> {
+  deleteEmployee(id: number): Observable<Employee> {
     const url = `${this.getEmployeeWebAPiUrl()}/${id}`;
 
     return this.http.delete<Employee>(url)
