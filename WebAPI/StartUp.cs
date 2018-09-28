@@ -1,5 +1,7 @@
-﻿using WebAPIDemo.Helpers;
+﻿using WebAPI.Helpers;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
+
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using System;
@@ -8,13 +10,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-[assembly: OwinStartup(typeof(WebAPIDemo.Startup))]
-namespace WebAPIDemo
+[assembly: OwinStartup(typeof(WebAPI.Startup))]
+namespace WebAPI
 {
     public class Startup
     {
         public void ConfigureAuth(IAppBuilder app)
         {
+            //app.UseCors(CorsOptions.AllowAll);
 
             var OAuthOptions = new OAuthAuthorizationServerOptions
             {

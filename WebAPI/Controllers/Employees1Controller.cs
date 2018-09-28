@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Web.Http;
 using WebAPI_DB;
-using WebAPIDemo.Services;
+using WebAPI.Services;
 
-namespace WebAPIDemo.Controllers
+namespace WebAPI.Controllers
 {
     //[Authorize]
     public class Employees1Controller : ApiController
@@ -16,33 +16,33 @@ namespace WebAPIDemo.Controllers
             _employeeService = new EmployeeService();
         }
 
-        [AllowAnonymous]
-        [HttpPost]
-        [Route("api/Employees1/Authenticate")]
-        public IHttpActionResult Authenticate([FromBody]Models.Employee emp)
-        {
-            Models.Employee authenticatedEmployee = _employeeService.Authenticate(emp.Username, emp.Password);
+        //[AllowAnonymous]
+        //[HttpPost]
+        //[Route("api/Employees1/Authenticate")]
+        //public IHttpActionResult Authenticate([FromBody]Models.Employee emp)
+        //{
+        //    Models.Employee authenticatedEmployee = _employeeService.Authenticate(emp.Username, emp.Password);
 
-            if (authenticatedEmployee == null)
-            {
-                return BadRequest("Username or password is incorrect");
-            }
+        //    if (authenticatedEmployee == null)
+        //    {
+        //        return BadRequest("Username or password is incorrect");
+        //    }
 
-            var tokenString = _employeeService.GetToken(authenticatedEmployee);
+        //    var tokenString = _employeeService.GetToken(authenticatedEmployee);
 
-            // return basic user info (without password) and token to store client side
-            //return Ok(new
-            //{
-            //    Id = user.Id,
-            //    Username = user.Username,
-            //    FirstName = user.FirstName,
-            //    LastName = user.LastName,
-            //    Token = tokenString
-            //});
+        //    // return basic user info (without password) and token to store client side
+        //    //return Ok(new
+        //    //{
+        //    //    Id = user.Id,
+        //    //    Username = user.Username,
+        //    //    FirstName = user.FirstName,
+        //    //    LastName = user.LastName,
+        //    //    Token = tokenString
+        //    //});
 
-            authenticatedEmployee.Token = tokenString;
-            return Ok(authenticatedEmployee);
-        }
+        //    authenticatedEmployee.Token = tokenString;
+        //    return Ok(authenticatedEmployee);
+        //}
 
         // GET api/<controller>
         [Authorize]

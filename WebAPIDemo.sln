@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIDemo", "WebAPIDemo\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI-DB", "WebAPI-DB\WebAPI-DB.csproj", "{831BCF2E-C0C9-4F06-9FDB-1E54543B7D45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularUI", "AngularUI\AngularUI.csproj", "{03FFED3D-BAB9-475B-BC32-36CCFD1862DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{3D4846D8-D16B-4C60-A22E-D2ECB80DB81C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{831BCF2E-C0C9-4F06-9FDB-1E54543B7D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{831BCF2E-C0C9-4F06-9FDB-1E54543B7D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{831BCF2E-C0C9-4F06-9FDB-1E54543B7D45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03FFED3D-BAB9-475B-BC32-36CCFD1862DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03FFED3D-BAB9-475B-BC32-36CCFD1862DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03FFED3D-BAB9-475B-BC32-36CCFD1862DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03FFED3D-BAB9-475B-BC32-36CCFD1862DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D4846D8-D16B-4C60-A22E-D2ECB80DB81C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4846D8-D16B-4C60-A22E-D2ECB80DB81C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4846D8-D16B-4C60-A22E-D2ECB80DB81C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4846D8-D16B-4C60-A22E-D2ECB80DB81C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
