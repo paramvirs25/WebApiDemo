@@ -15,8 +15,8 @@ namespace WebAPIWithToken
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            //EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
-            //config.EnableCors(cors);
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
