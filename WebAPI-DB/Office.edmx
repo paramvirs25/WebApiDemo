@@ -12,12 +12,10 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="JoiningDate" Type="datetime" Nullable="false" />
     <Property Name="Age" Type="int" Nullable="false" />
-    <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -27,12 +25,10 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="JoiningDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Age" Type="Int32" Nullable="false" />
-          <Property Name="Username" Type="String" Nullable="false" FixedLength="false" Unicode="true" MaxLength="50" />
-          <Property Name="Password" Type="String" Nullable="false" FixedLength="false" MaxLength="50" Unicode="true" />
         </EntityType>
         <EntityContainer Name="WebAPIDemoDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
@@ -50,8 +46,6 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
           <ScalarProperty Name="Age" ColumnName="Age" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
