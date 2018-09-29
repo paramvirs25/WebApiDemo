@@ -1,56 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
+
+using WebAPIWithToken.Models;
 using WebAPI_DB;
-using WebAPIDemo.Services;
-
-namespace WebAPIDemo.Controllers
+namespace WebAPIWithToken.Controllers
 {
-    [Authorize]
-    public class Employees1Controller : ApiController
+    public class EmployeesController : ApiController
     {
-        private EmployeeService _employeeService;
-
-        public Employees1Controller()
-        {
-            _employeeService = new EmployeeService();
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        [Route("api/Employees1/Authenticate")]
-        public IHttpActionResult Authenticate([FromBody]Models.Employee emp)
-        {
-            Models.Employee authenticatedEmployee = _employeeService.Authenticate(emp.Username, emp.Password);
-
-            if (authenticatedEmployee == null)
-            {
-                return BadRequest("Username or password is incorrect");
-            }
-
-            var tokenString = _employeeService.GetToken(authenticatedEmployee);
-
-            // return basic user info (without password) and token to store client side
-            //return Ok(new
-            //{
-            //    Id = user.Id,
-            //    Username = user.Username,
-            //    FirstName = user.FirstName,
-            //    LastName = user.LastName,
-            //    Token = tokenString
-            //});
-
-            authenticatedEmployee.Token = tokenString;
-            return Ok(authenticatedEmployee);
-        }
-
         // GET api/<controller>
-        [Authorize]
-        public IHttpActionResult Get()
+        public IEnumerable<Models.Employee> Get()
         {
             using (var context = new WebAPIDemoDBEntities())
             {
-                return Ok(MapFromDAL(context.Employees.ToList()));
+                return MapFromDAL(context.Employees.ToList());
 
             }
         }
@@ -70,7 +36,7 @@ namespace WebAPIDemo.Controllers
             }
         }
 
-        [Route("api/Employees1/PostEmployee")]
+        [Route("api/Employees/PostEmployee")]
         [HttpPost]
         public IHttpActionResult PostEmployee([FromBody] Models.Employee emp)
         {
@@ -93,7 +59,7 @@ namespace WebAPIDemo.Controllers
                     employee = context.Employees.ToList().FirstOrDefault((p) => p.Id == emp.Id);
                     employee = MapToDAL(emp, employee);
                 }
-                
+
                 context.SaveChanges();
 
                 //var employee = context.Employees.ToList().FirstOrDefault((p) => p.Id == id);
@@ -144,7 +110,7 @@ namespace WebAPIDemo.Controllers
                     context.Employees.Remove(employee);
                     context.SaveChanges();
 
-                    return Get();
+                    return Ok(MapFromDAL(employee));
                 }
             }
         }
@@ -161,9 +127,7 @@ namespace WebAPIDemo.Controllers
                 Id = emp.Id,
                 Name = emp.Name,
                 JoiningDate = emp.JoiningDate,
-                Age = emp.Age,
-                Username = emp.Username,
-                Password = emp.Password
+                Age = emp.Age
             };
         }
 
@@ -178,8 +142,6 @@ namespace WebAPIDemo.Controllers
             empDAL.Name = emp.Name;
             empDAL.JoiningDate = emp.JoiningDate;
             empDAL.Age = emp.Age;
-            empDAL.Username = emp.Username;
-            empDAL.Password = emp.Password;
 
             return empDAL;
         }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 
-[assembly: OwinStartup(typeof(WebAPIDemo.Startup))]
+//[assembly: OwinStartup(typeof(WebAPIDemo.Startup))]
 namespace WebAPIDemo
 {
     public class Startup
@@ -16,17 +16,17 @@ namespace WebAPIDemo
         public void ConfigureAuth(IAppBuilder app)
         {
 
-            var OAuthOptions = new OAuthAuthorizationServerOptions
-            {
-                AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(20),
-                Provider = new SimpleAuthorizationServerProvider()
-            };
+            //var OAuthOptions = new OAuthAuthorizationServerOptions
+            //{
+            //    AllowInsecureHttp = true,
+            //    TokenEndpointPath = new PathString("/token"),
+            //    AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(20),
+            //    Provider = new SimpleAuthorizationServerProvider()
+            //};
 
-            app.UseOAuthBearerTokens(OAuthOptions);
-            app.UseOAuthAuthorizationServer(OAuthOptions);
-            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+            //app.UseOAuthBearerTokens(OAuthOptions);
+            //app.UseOAuthAuthorizationServer(OAuthOptions);
+            //app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
 
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);

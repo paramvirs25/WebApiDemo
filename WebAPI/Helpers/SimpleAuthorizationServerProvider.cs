@@ -40,7 +40,10 @@ namespace WebAPI.Helpers
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+            //var res = context.OwinContext.Response;
+            //res.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+            //res.Headers.Add("Access-Control-Allow-Methods", new[] { "HEAD", "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS" });
+            //res.Headers.Add("Access-Control-Allow-Headers", new[] { "Origin", "Content-Type", "X-Auth-Token" });
 
 
             //Models.Employee authenticatedEmployee = new EmployeeService().Authenticate(context.UserName, context.Password);

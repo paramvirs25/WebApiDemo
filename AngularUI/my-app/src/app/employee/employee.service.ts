@@ -21,8 +21,8 @@ export class EmployeeService {
 
   /** GET heroes from the server */
   getAll(): Observable<Employee[]> {
-    this.msgSer.add('Called GetALL()');
-
+    console.log('Called GetALL()');
+    console.log(this.getEmployeeWebAPiUrl());
     return this.http.get<Employee[]>(this.getEmployeeWebAPiUrl())
       .pipe(
       tap(heroes => console.log(heroes)),
@@ -75,7 +75,7 @@ export class EmployeeService {
 
   /**Get Url to WebApi**/
   private getEmployeeWebAPiUrl(): string {
-    return `${environment.webApiUrl}Employees1`;
+    return `${environment.webApiUrl}Employees`;
   }
 
   /**
