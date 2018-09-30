@@ -83,6 +83,13 @@ namespace WebAPIWithToken.Controllers
             //}, employee);
         }
 
+        [Route("api/Employees/Login")]
+        [HttpPost]
+        public IHttpActionResult Login([FromBody] Models.Employee emp)
+        {
+            return Ok("Reacher here");
+        }
+
         // POST api/<controller>
         //public void Post([FromBody]string value)
         //{
