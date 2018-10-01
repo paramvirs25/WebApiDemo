@@ -75,7 +75,7 @@ export class EmployeeService {
 
   /**Get Url to WebApi**/
   private getEmployeeWebAPiUrl(): string {
-    return `${environment.webApiUrl}Employees`;
+    return `${environment.webApiUrl}/Employees`;
   }
 
   /**

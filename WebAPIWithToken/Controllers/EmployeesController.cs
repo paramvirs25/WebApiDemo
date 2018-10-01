@@ -9,6 +9,7 @@ using WebAPIWithToken.Models;
 using WebAPI_DB;
 namespace WebAPIWithToken.Controllers
 {
+    [Authorize]
     public class EmployeesController : ApiController
     {
         // GET api/<controller>
