@@ -19,6 +19,8 @@ import { AlertService, AuthenticationService, UserService } from './_services';
 
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
+import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { RegisterComponent } from './register';
     ListComponent,
     MessagesComponent,
     DetailComponent,
-    LeftNavigationComponent
+    LeftNavigationComponent,
+    HomeLayoutComponent,
+    LoginLayoutComponent
   ],
   imports: [
     BrowserModule,

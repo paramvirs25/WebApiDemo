@@ -1,0 +1,579 @@
+<!--Dashboard start -->
+<section class="main_container">
+  <!--Left sec start -->
+  <div class="left_col">
+    <div class="ToplogoSec biglogo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="logo">
+      </a>
+    </div>
+    <div class="ToplogoSec smllogo">
+      <a href="index.html">
+        <img src="images/fav.png" alt="logo">
+      </a>
+    </div>
+
+    <app-left-navigation></app-left-navigation>
+
+  </div> <!--Left sec end -->
+  <!--Right sec start -->
+  <div class="right_col">
+    <div class="rightcontent">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 TopNav">
+        <div class="col-xs-4 col-sm-2 col-md-2 col-lg-2 left_menu_icon">
+          <div class="row">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+            <span class="hideSideBar">×</span>
+          </div>
+        </div>
+        <div class="col-xs-8 col-sm-12 col-md-12 col-lg-12 right_menu">
+          <nav>
+            <div class="nav toggle" style="display: none;">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <button class="btn btn-default" type="button" data-target="#date-timeModal" data-toggle="modal">NEW MEETING</button>
+              </li>
+              <li>
+                <button class="btn btn-default text-uppercase" type="button">New Meeting Under Existing Agenda</button>
+              </li>
+              <li>
+                <span class="glyphicon glyphicon-cog"></span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="timers-screen">
+          <div id="countdowntimer" class="timers-setion orangeBtn"><span id="hms_timer"></span></div>
+          <button id="pauseBtnhms" class="pause-btn orng-border-btn">Pause</button>
+          <button id="stopBtnhms" class="stop-btn orng-border-btn">Stop</button>
+        </div>
+        <div class="table-body">
+          <div class="tablpadd">
+
+
+            <router-outlet></router-outlet>
+
+            <!--Display area-->
+            <!--<div class="screen-body mCustomScrollbar" data-mcs-theme="dark">
+                      <div class="acodion-heading">
+                        <p>#</p>
+                        <p>Agenda items</p>
+                      </div>
+
+
+
+
+                      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>1</p>
+                      <p>Meeting Open</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>2</p>
+                      <p>Declaration of interests</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>3</p>
+                      <p>Attendance & Apologies</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Add attending...">
+                        </div>
+                        <div class="form-group">
+                          <span class="label label-primary full-width">Attending</span>
+                        </div>
+                        <div class="form-group">
+                          <ul class="list-group">
+                            <li class="list-group-item">jag longia <span title="Change to apology" class="pull-right glyphicon glyphicon-chevron-right"></span> <span title="" class="pull-right attendance-option clickable glyphicon glyphicon-trash"></span></li>
+                            <li class="list-group-item">Jimmy<span title="Change to apology" class="pull-right glyphicon glyphicon-chevron-right"></span> <span title="" class="pull-right attendance-option clickable glyphicon glyphicon-trash"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Add apology">
+                        </div>
+                        <div class="form-group">
+                          <span class="label label-warning full-width">Apologies</span>
+                        </div>
+                        <div class="form-group">
+                          <ul class="list-group">
+                            <li class="list-group-item"><span class="pull-right">jag longia</span> <span title="Change to apology" class="glyphicon glyphicon-chevron-left"></span><span title="" class="attendance-option clickable glyphicon glyphicon-trash"></span></li>
+                            <li class="list-group-item"><span class="pull-right">Jimmy</span> <span title="Change to apology" class="glyphicon glyphicon-chevron-left"></span><span title="" class="attendance-option clickable glyphicon glyphicon-trash"></span></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingfour">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>4</p>
+                      <p>Meeting Close</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-12 meeting-option">
+                        <select name="" id="myselect" class="form-control" id="">
+                          <option value="">Select Next Meeting</option>
+                          <option value="createNewMeeting">Create New Meeting</option>
+                        </select>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingfive">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>5</p>
+                      <p>Meeting Open</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+                  <div class="panel-body">
+                    <div class="col-sm-12 meeting-opend-block">
+                      <div class="meeting-time-block">
+                        <label for="">Meeting Open by</label>
+                        <select name="" class="form-control" id="">
+                          <option value="">Param Singh</option>
+                          <option value="">Jagjit</option>
+                          <option value="">Amit</option>
+                        </select>
+                        <span>at</span>
+                        <div class='input-group date'>
+                          <input type='text' class="form-control" id='mOpendby' style="display: none" />
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Add Note">
+                      </div>
+                    </div>
+                    <div class="col-sm-12 meeting-opend-block">
+                      <table class="table table-hover table-bordered">
+                        <tr>
+                          <td><span class="label label-primary">Action</span></td>
+                          <td>sdfds</td>
+                          <td>Unassigned</td>
+                          <td>Sep11, 2018</td>
+                          <td><span class="label label-success">Complete</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="label label-primary">Action</span></td>
+                          <td>dasdsadf</td>
+                          <td>Param</td>
+                          <td>Sep11, 2018</td>
+                          <td><span class="label label-default">Open</span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingsix">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>6</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingseven">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>7</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseseven" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseven">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingeight">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>8</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseeight" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseeight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeight">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingnine">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>9</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsenine" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapsenine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingnine">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTen">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>10</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseten" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingelevn">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>11</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseelevn" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapseelevn" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingelevn">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingtwelve">
+                  <h4 class="panel-title">
+                    <span>
+                      <p>12</p>
+                      <p>Minutes of Previous Meeting</p>
+                    </span>
+                    <span>
+                      <button class="dlt-icon"></button>
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsetwelve" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="arrow-icon-down arrow-icon-up"></span>
+                      </a>
+                    </span>
+                  </h4>
+                </div>
+                <div id="collapsetwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwelve">
+                  <div class="panel-body">
+                    <p>11.1    Minutes of Previous Meeting</p>
+                    <input type="text" class="form-control" placeholder="Add notes">
+                    <div class="acodin-btns">
+                      <span class="btn glyphicon glyphicon-paperclip file-uplode orng-border-btn">
+                        <input type="file">
+                      </span>
+                      <button class="btn add-task orng-border-btn">Add Task</button>
+                      <button class="btn next orng-border-btn">Next</button>
+                      <button class="btn dlt orng-border-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                    </div>-->
+          </div>
+        </div>
+      </div> <!--Top nav end -->
+    </div><!--Right Content end -->
+  </div><!--Right sec end -->
+</section>
+<div id="date-timeModal" class="comn_Modal purpleModal signModal modal fade" tabindex="-1" role="dialog" aria-labelledby="date-timeModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+        <h4 class="modal-title" id="date-timeModalLabel">New Meeting</h4>
+      </div>
+      <div class="modal-body">
+        <div class="content_wrap">
+          <form>
+            <div class="form-group slect-style mtn-slct-icon">
+              <span class="select-icon">
+                <select class="form-control" id="sel1">
+                  <option>Option</option>
+                  <option>option</option>
+                  <option>option</option>
+                  <option>option</option>
+                </select>
+              </span>
+              <input type="text" class="form-control" placeholder="location">
+            </div>
+            <div class="time-pikr">
+              <div id="datetimepicker12" class="clender"></div>
+              <div class='input-group date'>
+                <label>Start Time</label>
+                <input type='text' class="form-control" id='datetimepicker3' style="display: none" />
+              </div>
+              <div class='input-group date '>
+                <label>End Time</label>
+                <input type='text' class="form-control" id='datetimepicker4' style="display: none" />
+              </div>
+            </div>
+            <div class="btn-position">
+              <button class="btn orng-border-btn">
+                <span class="add-btn-txt">SAVE</span>
+              </button>
+              <button type="button" class="btn orng-border-btn" data-dismiss="modal" aria-label="Close">
+                <span>CANCEL</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Message Alerts -->
+<div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog message-popup" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <h2>Are you sure?</h2>
+        <p class="big">Your Message Goes Here</p>
+      </div>
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+  <!-- Message Alerts -->
+  <!--<div style="text-align:center">
+
+    <router-outlet></router-outlet>
+    <hr />
+    <app-messages></app-messages>
+  </div>-->
