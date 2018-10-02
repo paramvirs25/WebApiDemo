@@ -17,7 +17,6 @@ import { AuthGuard } from './_guards';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AlertService, AuthenticationService, UserService } from './_services';
 
-import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 
@@ -25,7 +24,6 @@ import { RegisterComponent } from './register';
   declarations: [
     AppComponent,
     AlertComponent,
-    HomeComponent,
     LoginComponent,
     RegisterComponent,
 

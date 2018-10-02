@@ -78,7 +78,6 @@
     <Content Include="my-app\src\app\employee\detail\detail.component.html" />
     <Content Include="my-app\src\app\employee\list\list.component.css" />
     <Content Include="my-app\src\app\employee\list\list.component.html" />
-    <Content Include="my-app\src\app\home\home.component.html" />
     <Content Include="my-app\src\app\login\login.component.html" />
     <Content Include="my-app\src\app\messages\messages.component.css" />
     <Content Include="my-app\src\app\messages\messages.component.html" />
@@ -116,8 +115,6 @@
     <TypeScriptCompile Include="my-app\src\app\employee\employee.service.ts" />
     <TypeScriptCompile Include="my-app\src\app\employee\employee.ts" />
     <TypeScriptCompile Include="my-app\src\app\employee\list\list.component.ts" />
-    <TypeScriptCompile Include="my-app\src\app\home\home.component.ts" />
-    <TypeScriptCompile Include="my-app\src\app\home\index.ts" />
     <TypeScriptCompile Include="my-app\src\app\login\index.ts" />
     <TypeScriptCompile Include="my-app\src\app\login\login.component.ts" />
     <TypeScriptCompile Include="my-app\src\app\message.service.ts" />
