@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular UI that consumes WebAPI written in .net';
+
+  color = 'primary';
+  mode = 'determinate';
+  value = 50;
+  bufferValue = 75;
 }

@@ -7,27 +7,31 @@ using System.Web.Http;
 
 using WebAPIWithToken.Models;
 using WebAPI_DB;
+using System.Threading.Tasks;
+using System.Data.Entity;
+
 namespace WebAPIWithToken.Controllers
 {
     [Authorize]
     public class EmployeesController : ApiController
     {
         // GET api/<controller>
-        public IEnumerable<Models.Employee> Get()
+        public async Task<IHttpActionResult> Get()
         {
             using (var context = new WebAPIDemoDBEntities())
             {
-                return MapFromDAL(context.Employees.ToList());
-
+                var employees = await context.Employees.ToListAsync();
+                return Ok(MapFromDAL(employees));
             }
         }
 
         // GET api/<controller>/5
-        public IHttpActionResult Get(int id)
+        public async Task<IHttpActionResult> Get(int id)
         {
             using (var context = new WebAPIDemoDBEntities())
             {
-                var employee = context.Employees.ToList().FirstOrDefault((p) => p.Id == id);
+                var employees = await context.Employees.ToListAsync();
+                var employee = employees.FirstOrDefault((p) => p.Id == id);
                 if (employee == null)
                 {
                     return NotFound();
@@ -39,7 +43,7 @@ namespace WebAPIWithToken.Controllers
 
         [Route("api/Employees/PostEmployee")]
         [HttpPost]
-        public IHttpActionResult PostEmployee([FromBody] Models.Employee emp)
+        public async Task<IHttpActionResult> PostEmployee([FromBody] Models.Employee emp)
         {
             //string s = employee.Name;
             //return Ok(employee);
@@ -61,7 +65,7 @@ namespace WebAPIWithToken.Controllers
                     employee = MapToDAL(emp, employee);
                 }
 
-                context.SaveChanges();
+                await context.SaveChangesAsync();
 
                 //var employee = context.Employees.ToList().FirstOrDefault((p) => p.Id == id);
                 //if (employee == null)
@@ -84,12 +88,12 @@ namespace WebAPIWithToken.Controllers
             //}, employee);
         }
 
-        [Route("api/Employees/Login")]
-        [HttpPost]
-        public IHttpActionResult Login([FromBody] Models.Employee emp)
-        {
-            return Ok("Reacher here");
-        }
+        //[Route("api/Employees/Login")]
+        //[HttpPost]
+        //public IHttpActionResult Login([FromBody] Models.Employee emp)
+        //{
+        //    return Ok("Reacher here");
+        //}
 
         // POST api/<controller>
         //public void Post([FromBody]string value)
@@ -104,7 +108,7 @@ namespace WebAPIWithToken.Controllers
         //}
 
         // DELETE api/<controller>/5
-        public IHttpActionResult Delete(int id)
+        public async Task<IHttpActionResult> Delete(int id)
         {
             using (var context = new WebAPIDemoDBEntities())
             {
@@ -116,7 +120,7 @@ namespace WebAPIWithToken.Controllers
                 else
                 {
                     context.Employees.Remove(employee);
-                    context.SaveChanges();
+                    await context.SaveChangesAsync();
 
                     return Ok(MapFromDAL(employee));
                 }
