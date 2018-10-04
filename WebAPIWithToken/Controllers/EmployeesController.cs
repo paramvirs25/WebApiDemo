@@ -15,6 +15,10 @@ namespace WebAPIWithToken.Controllers
     [Authorize]
     public class EmployeesController : ApiController
     {
+        /// <summary>
+        /// Gets list of all employees
+        /// </summary>
+        /// <returns></returns>
         // GET api/<controller>
         public async Task<IHttpActionResult> Get()
         {
